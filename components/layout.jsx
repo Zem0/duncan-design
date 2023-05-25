@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import layoutStyles from './layout.module.sass';
-import utilStyles from '../styles/utils.module.css';
+import utilStyles from '../styles/utils.module.sass';
 import Link from 'next/link';
 
 const name = 'Duncan Horne';
