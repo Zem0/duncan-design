@@ -9,7 +9,7 @@ export const siteTitle = 'Next.js Sample Website';
 
 export default function Layout({ children, home }) {
     return (
-        <div className={`${layoutStyles.container} ${utilStyles.flexrow}`}>
+        <div className={`${layoutStyles.container} ${utilStyles['flex-row']}`}>
             <Head>
                 <link rel="icon" href="/favicon.ico" />
                 <meta
@@ -25,9 +25,9 @@ export default function Layout({ children, home }) {
                 <meta name="og:title" content={siteTitle} />
                 <meta name="twitter:card" content="summary_large_image" />
             </Head>
-            <nav>
+            <aside>
                 this is the navigation part
-            </nav>
+            </aside>
             <main>{children}</main>
             {/* {!home && (
                 <div className={styles.backToHome}>
