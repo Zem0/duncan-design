@@ -9,7 +9,7 @@ export const siteTitle = 'Next.js Sample Website';
 
 export default function Layout({ children, home }) {
     return (
-        <div className={`${layoutStyles.container} ${utilStyles['flex-row']}`}>
+        <div className={`${layoutStyles.container} ${utilStyles['flex']} ${utilStyles['flex-row']}`}>
             <Head>
                 <link rel="icon" href="/favicon.ico" />
                 <meta
