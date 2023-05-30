@@ -3,6 +3,7 @@ import Image from 'next/image';
 import layoutStyles from './layout.module.sass';
 import utilStyles from '../styles/utils.module.sass';
 import Link from 'next/link';
+import ThemeControl from './ThemeControl';
 
 const name = 'Duncan Horne';
 export const siteTitle = 'Next.js Sample Website';
@@ -27,6 +28,7 @@ export default function Layout({ children, home }) {
             </Head>
             <aside>
                 this is the navigation part
+                <ThemeControl/>
             </aside>
             <main>{children}</main>
             {/* {!home && (

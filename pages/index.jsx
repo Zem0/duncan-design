@@ -12,6 +12,7 @@ export default function Home() {
       <section>
         <p>[Your Self Introduction]</p>
         <p><Link href="/posts/first-post">Check my latest post</Link></p>
+        <p><Link href="/projects">Check my latest project</Link></p>
         <p>
           (This is a sample website - you’ll be building a site like this on{' '}
           <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
