@@ -4,13 +4,16 @@ import layoutStyles from './layout.module.sass';
 import utilStyles from '../styles/utils.module.sass';
 import Link from 'next/link';
 import ThemeControl from './ThemeControl';
+import Navigation from './Navigation';
+import ColouredStripes from './ColourdStripes';
 
 const name = 'Duncan Horne';
+
 export const siteTitle = 'Next.js Sample Website';
 
 export default function Layout({ children, home }) {
     return (
-        <div className={`${layoutStyles.container} ${utilStyles['flex']} ${utilStyles['flex-row']}`}>
+        <div className={`${layoutStyles.container} ${utilStyles.flex} ${utilStyles['flex-row']}`}>
             <Head>
                 <link rel="icon" href="/favicon.ico" />
                 <meta
@@ -26,11 +29,21 @@ export default function Layout({ children, home }) {
                 <meta name="og:title" content={siteTitle} />
                 <meta name="twitter:card" content="summary_large_image" />
             </Head>
-            <aside>
-                this is the navigation part
+            <aside className={`${utilStyles.flex} ${utilStyles['flex-column']} ${utilStyles['space-between']}`}>
+                <Image
+                    src="/../public/images/webLogo.png"
+                    width={60}
+                    height={60}
+                    priority={true}
+                    alt="Duncandesign logo"
+                />
+                <Navigation/>
                 <ThemeControl/>
             </aside>
-            <main>{children}</main>
+            <main className={`${utilStyles.flex} ${utilStyles['flex-column']}`}>
+                {children}
+                <ColouredStripes/>
+            </main>
             {/* {!home && (
                 <div className={styles.backToHome}>
                     <Link href="/">← Back to home</Link>

@@ -1,0 +1,25 @@
+.theme-control
+    padding: .3rem
+    position: relative
+    background: var(--nav-background-level-2)
+
+    .theme-control__button
+        z-index: 2
+        padding: .5rem
+        cursor: pointer
+        border-radius: 50%
+        width: calc(100%/3)
+        background-color: transparent
+
+    .theme-control__slider
+        position: absolute
+        display: block
+        top: .3rem
+        bottom: .3rem
+        border-radius: .5rem
+        width: calc(100%/3)
+        z-index: 1
+        background: var(--primary-background-color)
+        transition: 0.15s ease, transform 0.25s ease-out
+
+

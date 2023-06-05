@@ -1,4 +1,5 @@
 @import '/styles/themes.sass'
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400&display=swap')
 
 *
     box-sizing: border-box
@@ -7,29 +8,40 @@ html,
 body
     padding: 0
     margin: 0
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+    font-family: 'Fredoka', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
     Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif
     line-height: 1.6
     font-size: 1.8rem
-    background: var(--back)
+    font-weight: 300
+    overscroll-behavior: none
+    background: var(--primary-background-color)
+
+// aside
 
 a
     color: #ff2d55
     text-decoration: none
 
 a:hover
-    text-decoration: underline
+    text-decoration: none
 
 img
     max-width: 100%
     display: block
+
+ul
+    padding: 0
+    margin: 0
+
+li
+    list-style-type: none
 
 /*  ———————————————————————————————————————————————————————————————————————————
     TYPOGRAPHY
     ——————————————————————————————————————————————————————————————————————————— */
 
 html
-    font-size: 62.5% // = 10px
+    font-size: 62.5%
     font-family: Arial, Helvetica, sans-serif
 
 // so now in most browsers:

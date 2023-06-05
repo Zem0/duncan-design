@@ -1,29 +1,36 @@
-import utilStyles from '../../styles/utils.module.sass'
+import utilStyles from '../../styles/utils.module.sass';
+import themeStyles from './index.module.sass';
+import { IceCream, Sun, Moon } from '@phosphor-icons/react';
+import { useEffect } from 'react';
 
 export default function ThemeControl() {
-    function ThemeButton({children}) {
+
+    function ThemeButton({themeName = "", children}) {
+        const setChosenTheme = () => {
+            document.documentElement.setAttribute('data-theme', themeName)
+            localStorage.setItem('theme', themeName)
+        }
+
         return (
-            <div>
+            <div className={`${themeStyles['theme-control__button']} ${utilStyles['flex']} ${utilStyles['flex-row']} ${utilStyles['fully-aligned']} ${themeName}`} onClick={setChosenTheme}>
                 {[children]}
+                <span>{themeName}</span>
             </div>
         )
     }
 
     return (
-        <div className={`${utilStyles['flex flex-row']} ${utilStyles['flex-row']}`}>
-            <ThemeButton>
-                <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
-                    <circle cx="12" cy="12" r="3.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></circle>
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 2.75V4.25"></path>
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.25 6.75L16.0659 7.93416"></path>
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21.25 12.0001L19.75 12.0001"></path>
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.25 17.2501L16.0659 16.066"></path>
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 19.75V21.25"></path>
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7.9341 16.0659L6.74996 17.25"></path>
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.25 12.0001L2.75 12.0001"></path>
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7.93405 7.93423L6.74991 6.75003"></path>
-                </svg>
+        <div className={`${utilStyles['flex']} ${utilStyles['flex-row']} ${utilStyles['rounded-m']} ${themeStyles['theme-control']}`}>
+            <ThemeButton themeName='purple'>
+                <IceCream weight="fill"/>
             </ThemeButton>
+            <ThemeButton themeName='light'>
+                <Sun weight="fill"/>
+            </ThemeButton>
+            <ThemeButton themeName='dark'>
+                <Moon weight="fill"/>
+            </ThemeButton>
+            <div className={`${themeStyles['theme-control__slider']} slider`}></div>
         </div>
     )
 }

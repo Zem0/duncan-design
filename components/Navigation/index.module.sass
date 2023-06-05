@@ -1,0 +1,13 @@
+@import '../../styles/variables'
+
+.navigation
+    font-size: 1.6rem
+    .option
+        padding-block: $gap
+        padding-inline: calc( $gap + .4rem )
+        color: var(--secondary-text-color)
+        &.active,
+        &.active:hover
+            background-color: var(--nav-background-level-1)
+        &:hover
+            background-color: var(--nav-background-level-2)

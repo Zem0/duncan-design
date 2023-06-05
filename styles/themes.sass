@@ -2,6 +2,32 @@
 
 \:root,
 [data-theme="light"]
-    --sidebar-background-color: #{$secondary-color}
+    --primary-background-color: #{$second-color}
+    --primary-text-color: #{$fifth-color}
+    --secondary-text-color: #{$fifth-color}
+    --nav-background-level-1: rgba(255, 255, 255, 0.2)
+    --nav-background-level-2: rgba(0,0,0,0.1)
 [data-theme="dark"]
-    --sidebar-background-color: #{$secondary-color}
+    --primary-background-color: #{$fifth-color}
+    --primary-text-color: #{$second-color}
+    --secondary-text-color: #{$second-color}
+    --nav-background-level-1: rgba(255, 255, 255, 0.2)
+    --nav-background-level-2: rgba(0,0,0,0.1)
+[data-theme="purple"]
+    --primary-background-color: #{$primary-color}
+    --primary-text-color: #{$fifth-color}
+    --secondary-text-color: #{$second-color}
+    --nav-background-level-1: rgba(255, 255, 255, 0.2)
+    --nav-background-level-2: rgba(0,0,0,0.1)
+
+[data-theme="light"] .light,
+[data-theme="dark"] .dark,
+[data-theme="purple"] .purple
+    color: pink
+
+[data-theme="light"]
+    .slider
+        transform: translateX(6.3rem)
+[data-theme="dark"]
+    .slider
+        transform: translateX(12.5rem)
