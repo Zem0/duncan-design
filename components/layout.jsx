@@ -1,19 +1,19 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import layoutStyles from './layout.module.sass';
 import utilStyles from '../styles/utils.module.sass';
-import Link from 'next/link';
-import ThemeControl from './ThemeControl';
 import Navigation from './Navigation';
-import ColouredStripes from './ColourdStripes';
+import SiteTitle from './SiteTitle';
+import AnimatedGradient from './AnimatedGradient';
+import Colophon from './Colophon';
+import FooterContent from "./Footer";
 
 const name = 'Duncan Horne';
 
-export const siteTitle = 'Next.js Sample Website';
+export const siteTitle = 'Duncan Design';
 
 export default function Layout({ children, home }) {
     return (
-        <div className={`${layoutStyles.container} ${utilStyles.flex} ${utilStyles['flex-row']}`}>
+        <div className={`${layoutStyles.container} ${utilStyles.flex} ${utilStyles['flex-column']}`}>
             <Head>
                 <link rel="icon" href="/favicon.ico" />
                 <meta
@@ -29,21 +29,24 @@ export default function Layout({ children, home }) {
                 <meta name="og:title" content={siteTitle} />
                 <meta name="twitter:card" content="summary_large_image" />
             </Head>
-            <aside className={`${utilStyles.flex} ${utilStyles['flex-column']} ${utilStyles['space-between']}`}>
-                <Image
-                    src="/../public/images/webLogo.png"
-                    width={60}
-                    height={60}
-                    priority={true}
-                    alt="Duncandesign logo"
-                />
-                <Navigation/>
-                <ThemeControl/>
-            </aside>
-            <main className={`${utilStyles.flex} ${utilStyles['flex-column']}`}>
-                {children}
-                <ColouredStripes/>
-            </main>
+            <header className={`${utilStyles.flex}`}>
+                <div className={`${layoutStyles['header-cover-gradient']}`}></div>
+                {/* <div className={`${layoutStyles['canvas-holder']} ${utilStyles.flex} ${utilStyles['flex-column']} ${utilStyles['flex-align-baseline']} ${utilStyles['space-between']}`}>
+                    <AnimatedGradient/>
+                </div> */}
+                <div className={`${utilStyles.flex} ${utilStyles['flex-row']} ${utilStyles['flex-align-baseline']} ${utilStyles['fg-1']} ${utilStyles['space-between']}`}>
+                    <SiteTitle/>
+                    <Navigation/>
+                </div>
+            </header>
+            <div className={`${layoutStyles['main-content-holder']} ${utilStyles.flex} ${utilStyles['flex-column']}`}>
+                <main className={`${utilStyles.flex} ${utilStyles['flex-column']}`}>
+                    <div className={`${layoutStyles['main-content']}`}>
+                        {children}
+                    </div>
+                </main>
+                <FooterContent/>
+            </div>
             {/* {!home && (
                 <div className={styles.backToHome}>
                     <Link href="/">← Back to home</Link>

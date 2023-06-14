@@ -1,15 +1,49 @@
+@import '../styles/variables'
+
 .container
-    aside
-        width: 26rem
-        height: 100vh
-        height: 100svh
+    header
+        position: relative
         padding: 3.2rem
+        padding-bottom: 16rem
         font-size: 1.4rem
-        background-color: var(--primary-background-color)
+        overflow: hidden
+        background-color: var(--primary-background-color-light)
+        background: linear-gradient(-45deg, #c3cbd8, #c3dbce, #ddc3cd, #d0c2ad)
+        background-size: 600% 100%
+        animation: gradient 30s ease infinite
+        animation-direction: alternate
+
+    .header-cover-gradient
+        position: absolute
+        background: linear-gradient(0deg, #ECECEC, transparent)
+        inset: 0
+
+    @keyframes gradient
+        0%
+            background-position: 0% 50%
+        50%
+            background-position: 100% 50%
+        100%
+            background-position: 0% 50%
+
+    .canvas-holder
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+
+    .main-content-holder
+        flex: 1
+        max-height: 100vh
+        max-height: 100svh
+        overflow-y: scroll
 
     main
-        flex: 1
-        background-color: #FFF
+        height: 100vh
+        height: 100svh
+        .main-content
+            padding: 8rem 16rem
 
     .header
         display: flex

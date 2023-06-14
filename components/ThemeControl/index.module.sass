@@ -1,15 +1,21 @@
+@import '../../styles/variables'
+
 .theme-control
+    width: 100%
     padding: .3rem
     position: relative
     background: var(--nav-background-level-2)
 
     .theme-control__button
+        gap: calc($gap/3)
         z-index: 2
+        opacity: .6
         padding: .5rem
         cursor: pointer
         border-radius: 50%
         width: calc(100%/3)
         background-color: transparent
+        color: var(--secondary-text-color)
 
     .theme-control__slider
         position: absolute
@@ -21,5 +27,17 @@
         z-index: 1
         background: var(--primary-background-color)
         transition: 0.15s ease, transform 0.25s ease-out
+
+[data-theme="light"] .theme-control__button.light,
+[data-theme="dark"] .theme-control__button.dark,
+[data-theme="purple"] .theme-control__button.purple
+    opacity: 1
+
+[data-theme="light"]
+    .slider
+        transform: translateX(2.75rem)
+[data-theme="dark"]
+    .slider
+        transform: translateX(5.4rem)
 
 

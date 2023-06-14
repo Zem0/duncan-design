@@ -1,3 +1,5 @@
+@import '../styles/variables'
+
 .flex
     display: flex
 
@@ -7,18 +9,36 @@
 .flex-column
     flex-direction: column
 
+.fg-1
+    flex-grow: 1
+
 .gap-6
     gap: .6rem
+
+.gap-15
+    gap: 1.5rem
+
+.rel
+    position: relative
 
 .space-between
     justify-content: space-between
 
+.fill-white
+    fill: var(--secondary-text-color)
+
 .flex-align-center
     align-items: center
+
+.flex-align-baseline
+    align-items: baseline
 
 .fully-aligned
     align-items: center
     justify-content: center
+
+.grid
+    display: grid
 
 .heading2Xl
     font-size: 2.5rem
@@ -62,5 +82,25 @@
 .lightText
     color: #666
 
+.main-content-padding
+    padding: 8rem
+
+.oversized-text
+    font-size: 8rem
+    font-weight: 800
+    line-height: 1.2
+    margin-bottom: calc($gap*6)
+
 .rounded-m
-    border-radius: .8rem
+    border-radius: $rounded-m
+
+.z-1
+    z-index: 1
+
+@media screen and (min-width: 1140px)
+    .text-two-column
+        grid-template-columns: repeat(2,minmax(0,1fr))
+
+@media screen and (min-width: 1576px)
+    .text-two-column-oversized
+        grid-template-columns: repeat(2,minmax(0,1fr))
