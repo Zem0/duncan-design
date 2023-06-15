@@ -1,9 +1,10 @@
-import Link from "next/link";
-import { useRouter } from "next/router";
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { Folders, UserSquare, Certificate, DribbbleLogo, ArrowSquareUpRight, TwitterLogo } from '@phosphor-icons/react';
-import navStyles from "./index.module.sass"
-import utilStyles from "../../styles/utils.module.sass"
-import MastodonLogo from "../../public/images/mastodon1.svg"
+import navStyles from './index.module.sass';
+import utilStyles from '../../styles/utils.module.sass';
+import MastodonLogo from '../../public/images/mastodon1.svg';
+import React from 'react';
 
 export default function Navigation() {
 
@@ -45,20 +46,20 @@ export default function Navigation() {
         <nav className={`${navStyles.navigation}`}>
             <ul className={`${utilStyles.flex} ${utilStyles['flex-row']}`}>
                 <li>
-                    <Link className={`${navStyles.option} ${getActiveRoute(router) == "/posts/first-post" ? navStyles.active : ""} ${utilStyles.flex} ${utilStyles['flex-align-center']} ${utilStyles['rounded-m']} ${utilStyles['gap-6']}`} href="/posts/first-post">
-                        <UserSquare weight={getActiveRoute(router) == "/posts/first-post" ? "fill" : "duotone"}/>
+                    <Link className={`${navStyles.option} ${getActiveRoute(router) == '/posts/first-post' ? navStyles.active : ''} ${utilStyles.flex} ${utilStyles['flex-align-center']} ${utilStyles['rounded-m']} ${utilStyles['gap-6']}`} href="/posts/first-post">
+                        <UserSquare weight={getActiveRoute(router) == '/posts/first-post' ? 'fill' : 'duotone'}/>
                         About
                     </Link>
                 </li>
                 <li>
-                    <Link className={`${navStyles.option} ${getActiveRoute(router) == "/projects" ? navStyles.active : ""} ${utilStyles.flex} ${utilStyles['flex-align-center']} ${utilStyles['rounded-m']} ${utilStyles['gap-6']}`} href="/posts/first-post">
-                        <Folders weight={getActiveRoute(router) == "/posts/first-post" ? "fill" : "duotone"}/>
+                    <Link className={`${navStyles.option} ${getActiveRoute(router) == '/projects' ? navStyles.active : ''} ${utilStyles.flex} ${utilStyles['flex-align-center']} ${utilStyles['rounded-m']} ${utilStyles['gap-6']}`} href="/posts/first-post">
+                        <Folders weight={getActiveRoute(router) == '/posts/first-post' ? 'fill' : 'duotone'}/>
                         Projects
                     </Link>
                 </li>
                 <li>
-                    <Link className={`${navStyles.option} ${getActiveRoute(router) == "/projects" ? navStyles.active : ""} ${utilStyles.flex} ${utilStyles['flex-align-center']} ${utilStyles['rounded-m']} ${utilStyles['gap-6']}`} href="/posts/first-post">
-                        <Certificate weight={getActiveRoute(router) == "/posts/first-post" ? "fill" : "duotone"}/>
+                    <Link className={`${navStyles.option} ${getActiveRoute(router) == '/projects' ? navStyles.active : ''} ${utilStyles.flex} ${utilStyles['flex-align-center']} ${utilStyles['rounded-m']} ${utilStyles['gap-6']}`} href="/posts/first-post">
+                        <Certificate weight={getActiveRoute(router) == '/posts/first-post' ? 'fill' : 'duotone'}/>
                         CV
                     </Link>
                 </li>

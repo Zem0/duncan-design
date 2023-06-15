@@ -3,6 +3,7 @@ import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.sass';
 import { CodeBlock, PaintBrush } from '@phosphor-icons/react';
 import React from 'react';
+import Section from '../components/Section';
 
 export default function Home() {
     return (
@@ -13,7 +14,7 @@ export default function Home() {
             <section className={`${utilStyles['text-two-column-oversized']} ${utilStyles.grid}`}>
                 <div>
                     <p className={`${utilStyles['oversized-text']}`}>
-                        Hi. I&apos;m Duncan, a designer<PaintBrush weight="fill"/> and front-end developer<CodeBlock weight="fill"/> based in the UK.
+                        Hi. I&apos;m Duncan, a designer<PaintBrush weight="fill"/> &amp; front-end developer<CodeBlock weight="fill"/> based in the UK.
                     </p>
                 </div>
                 <div>
@@ -22,6 +23,7 @@ export default function Home() {
                     <p><Link href="/projects">Check my latest project</Link></p> */}
                 </div>
             </section>
+            <Section heading='Latest Projects'/>
         </Layout>
     );
 }
