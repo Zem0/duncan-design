@@ -1,0 +1,20 @@
+.marquee
+    position: relative
+    width: 100%
+    white-space: nowrap
+    font-family: 'Space Mono', monospace
+
+    .marquee__marquee-inner
+        position: absolute
+        width:200%
+        animation: scroll-x 30s linear infinite
+        gap: 1.6rem
+        .marquee__content
+            width: 60%
+            gap: 1.6rem
+
+@keyframes scroll-x
+    0%
+        transform: translateX(0%)
+    100%
+        transform: translateX(-100%)

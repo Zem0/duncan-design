@@ -87,9 +87,12 @@
 
 .oversized-text
     font-size: 8rem
-    font-weight: 800
+    font-variation-settings: 'wght' 800
     line-height: 1.2
     margin-bottom: calc($gap*6)
+    transition: font-variation-settings 1s ease
+    &:hover
+        font-variation-settings: 'wght' 200
 
 .rounded-m
     border-radius: $rounded-m

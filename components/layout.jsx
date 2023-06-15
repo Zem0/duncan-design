@@ -1,13 +1,12 @@
+import React from 'react';
 import Head from 'next/head';
 import layoutStyles from './layout.module.sass';
 import utilStyles from '../styles/utils.module.sass';
 import Navigation from './Navigation';
 import SiteTitle from './SiteTitle';
-import AnimatedGradient from './AnimatedGradient';
-import Colophon from './Colophon';
-import FooterContent from "./Footer";
-
-const name = 'Duncan Horne';
+import FooterContent from './Footer';
+import Link from 'next/link';
+import Marquee from './Marquee';
 
 export const siteTitle = 'Duncan Design';
 
@@ -43,15 +42,16 @@ export default function Layout({ children, home }) {
                 <main className={`${utilStyles.flex} ${utilStyles['flex-column']}`}>
                     <div className={`${layoutStyles['main-content']}`}>
                         {children}
+                        {!home && (
+                            <div>
+                                <Link href="/">← Back to home</Link>
+                            </div>
+                        )}
                     </div>
                 </main>
+                <Marquee/>
                 <FooterContent/>
             </div>
-            {/* {!home && (
-                <div className={styles.backToHome}>
-                    <Link href="/">← Back to home</Link>
-                </div>
-            )} */}
         </div>
     );
 }
