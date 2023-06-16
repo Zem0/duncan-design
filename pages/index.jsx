@@ -6,6 +6,7 @@ import React from 'react';
 import Section from '../components/Section';
 import ProjectCard from '../components/ProjectCard';
 import Image from 'next/image';
+import outgoingsIcon from '../public/images/outgoingsIcon.png';
 
 export default function Home() {
     return (
@@ -28,7 +29,7 @@ export default function Home() {
             <Section heading='Latest Projects'>
                 <ProjectCard caption='Icon Design'>
                     <Image
-                        src="/../public/images/outgoingsIcon.png"
+                        src={outgoingsIcon}
                         width={400}
                         height={400}
                         priority={true}

@@ -4,7 +4,6 @@ import { Folders, UserSquare, Certificate, DribbbleLogo, ArrowSquareUpRight, Twi
 import navStyles from './index.module.sass';
 import utilStyles from '../../styles/utils.module.sass';
 import MastodonLogo from '../../public/images/mastodon1.svg';
-import React from 'react';
 
 export default function Navigation() {
 
@@ -87,4 +86,4 @@ export default function Navigation() {
             </ul> */}
         </nav>
     )
-}
+};

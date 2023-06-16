@@ -1,13 +1,13 @@
 import titleStyles from './index.module.sass';
 import utilStyles from '../../styles/utils.module.sass';
 import Image from 'next/image';
-import React from 'react';
+import logo from '../../public/images/webLogo3.png';
 
 export default function SiteTitle() {
     return (
         <div className={`${titleStyles['site-title']} ${utilStyles.flex} ${utilStyles['fully-aligned']} ${utilStyles['z-1']}`}>
             <Image
-                src="/../public/images/webLogo3.png"
+                src={logo}
                 width={40}
                 height={40}
                 priority={true}
