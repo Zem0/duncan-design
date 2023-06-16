@@ -4,6 +4,8 @@ import utilStyles from '../styles/utils.module.sass';
 import { CodeBlock, PaintBrush } from '@phosphor-icons/react';
 import React from 'react';
 import Section from '../components/Section';
+import ProjectCard from '../components/ProjectCard';
+import Image from 'next/image';
 
 export default function Home() {
     return (
@@ -23,7 +25,16 @@ export default function Home() {
                     <p><Link href="/projects">Check my latest project</Link></p> */}
                 </div>
             </section>
-            <Section heading='Latest Projects'/>
+            <Section heading='Latest Projects'>
+                <ProjectCard caption='Icon Design'>
+                    <Image
+                        src="/../public/images/outgoingsIcon.png"
+                        width={400}
+                        height={400}
+                        priority={true}
+                        alt="Duncandesign logo"/>
+                </ProjectCard>
+            </Section>
         </Layout>
     );
 }

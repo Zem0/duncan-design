@@ -40,12 +40,14 @@ export default function marquee() {
         return (
             <span className={`${marqueeStyles['marquee__content']} ${utilStyles.flex} ${utilStyles['flex-align-center']}`}>
                 {
-                    marqueeItems.map((marqueeItem) => (
-                        <>
-                            <p key={marqueeItem.name}>{marqueeItem.name.toUpperCase()}</p>
-                            {marqueeItem.icon}
-                        </>
-                    ))
+                    React.Children.toArray(
+                        marqueeItems.map((marqueeItem) => (
+                            <>
+                                <p >{marqueeItem.name.toUpperCase()}</p>
+                                {marqueeItem.icon}
+                            </>
+                        ))
+                    )
                 }
             </span>
         );
