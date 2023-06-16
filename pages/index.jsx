@@ -17,7 +17,7 @@ export default function Home() {
             <section className={`${utilStyles['text-two-column-oversized']} ${utilStyles.grid}`}>
                 <div>
                     <p className={`${utilStyles['oversized-text']}`}>
-                        Hi. I&apos;m Duncan, a designer<PaintBrush weight="fill"/> &amp; front-end developer<CodeBlock weight="fill"/> based in the UK.
+                        Hi. I&apos;m Duncan, a designer<PaintBrush weight="fill"/> &amp; front-end developer<CodeBlock weight="fill"/> based in the UK ツ
                     </p>
                 </div>
                 <div>
@@ -27,14 +27,13 @@ export default function Home() {
                 </div>
             </section>
             <Section heading='Latest Projects'>
-                <ProjectCard caption='Icon Design'>
-                    <Image
-                        src={outgoingsIcon}
-                        width={400}
-                        height={400}
-                        priority={true}
-                        alt="Duncandesign logo"/>
-                </ProjectCard>
+                <div className={`${utilStyles.grid} ${utilStyles['grid-cols-1']} ${utilStyles['grid-cols-2']} ${utilStyles['grid-cols-3']}`}>
+                    <ProjectCard
+                        caption='Icon Design'
+                        imgSrc={outgoingsIcon}
+                        altText='Icon for the iOS app Outgoings'>
+                    </ProjectCard>
+                </div>
             </Section>
         </Layout>
     );
