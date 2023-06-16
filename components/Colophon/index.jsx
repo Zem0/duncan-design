@@ -1,7 +1,7 @@
-import useMountTransition from "../../scripts/useMountTransition";
-import { useState } from "react";
-import colophonStyles from "./index.module.sass"
-import utilStyles from "../../styles/utils.module.sass"
+import useMountTransition from '../../scripts/useMountTransition';
+import { useState } from 'react';
+import colophonStyles from './index.module.sass';
+import utilStyles from '../../styles/utils.module.sass';
 
 export default function Colophon() {
     const [isMounted, setIsMounted] = useState(false);
@@ -31,4 +31,4 @@ export default function Colophon() {
 
         </div>
     );
-};
+}

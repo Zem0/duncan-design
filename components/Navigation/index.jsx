@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { Folders, UserSquare, Certificate, DribbbleLogo, ArrowSquareUpRight, TwitterLogo } from '@phosphor-icons/react';
+import { Folders, UserSquare, Certificate } from '@phosphor-icons/react';
 import navStyles from './index.module.sass';
 import utilStyles from '../../styles/utils.module.sass';
-import MastodonLogo from '../../public/images/mastodon1.svg';
+// import MastodonLogo from '../../public/images/mastodon1.svg';
 
 export default function Navigation() {
 
@@ -85,5 +85,5 @@ export default function Navigation() {
                 </li>
             </ul> */}
         </nav>
-    )
-};
+    );
+}
