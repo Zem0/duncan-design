@@ -15,7 +15,7 @@
 
     .header-cover-gradient
         position: absolute
-        background: linear-gradient(0deg, #ECECEC, transparent)
+        background: linear-gradient(0deg, #E3E3E8, transparent)
         inset: 0
 
     @keyframes gradient
@@ -33,12 +33,17 @@
         left: 0
         right: 0
 
-    .main-content-holder
+    .page-holder
         flex: 1
 
-    main
-        .main-content
-            padding: 8rem 16rem
+    .main-content-holder
+        display: grid
+        grid-template-columns: [full-start] minmax(8vmin, auto) [wide-start] minmax(auto, 240px) [main-start] min(800px,100% - 16vmin) [main-end] minmax(auto, 240px) [wide-end] minmax(8vmin, auto) [full-end]
+
+    .main-content
+        gap: 3rem
+        padding: 8rem 0
+        grid-column: main-start/main-end
 
     .header
         display: flex

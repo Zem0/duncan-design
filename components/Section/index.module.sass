@@ -1,5 +1,30 @@
 .section
     width: 100%
+    background: var(--foreground-color)
+    border-radius: var(--card-border-radius)
+    padding: var(--card-padding)
+    box-shadow: rgba(102, 102, 102, 0.1) 0px 10px 20px
+
+
+
+    &__icon
+
+.section--w-heading
+    padding: 0
+    > *
+        padding: var(--card-padding)
     .section__heading
         width: 100%
-        border-bottom: .3rem solid #C3DBCE
+        border-bottom: .3rem solid rgba(0,0,0,.1)
+        margin: 0
+        gap: var(--gap)
+        font-size: 2.6rem
+        padding: var(--card-padding)
+        padding-bottom: calc(var(--card-padding) / 2)
+        padding-top: calc(var(--card-padding) / 1.2)
+
+.section--notes
+    background: var(--notes-color-lighter)
+    .section__heading
+        color: var(--notes-color)
+        border-bottom: .3rem solid var(--notes-color-light)

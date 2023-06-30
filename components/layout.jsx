@@ -2,11 +2,11 @@ import React from 'react';
 import Head from 'next/head';
 import layoutStyles from './layout.module.sass';
 import utilStyles from '../styles/utils.module.sass';
-import Navigation from './Navigation';
-import SiteTitle from './SiteTitle';
+// import Navigation from './Navigation';
+// import SiteTitle from './SiteTitle';
 import FooterContent from './Footer';
 import Link from 'next/link';
-import Marquee from './Marquee';
+// import Marquee from './Marquee';
 
 export const siteTitle = 'Duncan Design';
 
@@ -28,19 +28,16 @@ export default function Layout({ children, home }) {
                 <meta name="og:title" content={siteTitle} />
                 <meta name="twitter:card" content="summary_large_image" />
             </Head>
-            <header className={`${utilStyles.flex}`}>
+            {/* <header className={`${utilStyles.flex}`}>
                 <div className={`${layoutStyles['header-cover-gradient']}`}></div>
-                {/* <div className={`${layoutStyles['canvas-holder']} ${utilStyles.flex} ${utilStyles['flex-column']} ${utilStyles['flex-align-baseline']} ${utilStyles['space-between']}`}>
-                    <AnimatedGradient/>
-                </div> */}
                 <div className={`${utilStyles.flex} ${utilStyles['flex-row']} ${utilStyles['flex-align-baseline']} ${utilStyles['fg-1']} ${utilStyles['space-between']}`}>
                     <SiteTitle/>
                     <Navigation/>
                 </div>
-            </header>
-            <div className={`${layoutStyles['main-content-holder']} ${utilStyles.flex} ${utilStyles['flex-column']}`}>
-                <main className={`${utilStyles.flex} ${utilStyles['flex-column']}`}>
-                    <div className={`${layoutStyles['main-content']}`}>
+            </header> */}
+            <div className={`${layoutStyles['page-holder']} ${utilStyles.flex} ${utilStyles['flex-column']}`}>
+                <main className={`${utilStyles.flex} ${utilStyles['flex-column']} ${layoutStyles['main-content-holder']}`}>
+                    <div className={`${layoutStyles['main-content']} ${utilStyles.flex} ${utilStyles['flex-column']}`}>
                         {children}
                         {!home && (
                             <div>
@@ -49,7 +46,7 @@ export default function Layout({ children, home }) {
                         )}
                     </div>
                 </main>
-                <Marquee/>
+                {/* <Marquee/> */}
                 <FooterContent/>
             </div>
         </div>

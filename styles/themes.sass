@@ -3,6 +3,10 @@
 \:root,
 [data-theme="light"]
     --foreground-color: #FFFFFF
+    --notes-color: #FEBE01
+    --notes-color-light: hsla(45, 99%, 27%, 0.13)
+    --notes-color-lighter: #FFF9EB
+    --notes-border-color: transparentize(#{$beige}, 50%)
     --primary-background-color: #{$primary-background-color-light}
     // --secondary-background-color:
     --primary-text-color: #{$fifth-color}
@@ -13,6 +17,10 @@
 
 [data-theme="dark"]
     --foreground-color: #FFFFFF
+    --notes-color: #FEBE01
+    --notes-color-light: #FFF9EB
+    --notes-color-lighter: #FFF9EB
+    --notes-border-color: transparentize(, )
     --primary-background-color: #{$primary-color-dark}
     --secondary-background-color: #{$primary-color-dark}
     --primary-text-color: #{$second-color}
@@ -23,6 +31,10 @@
 
 [data-theme="purple"]
     --foreground-color: #FFFFFF
+    --notes-color: #FEBE01
+    --notes-color-light: #FFF9EB
+    --notes-color-lighter: #FFF9EB
+    --notes-border-color: transparentize(, )
     --primary-background-color: #{$primary-color-light}
     --secondary-background-color: #{$second-color}
     --primary-text-color: #{$fifth-color}
@@ -30,3 +42,8 @@
     --nav-background-level-1: rgba(255, 255, 255, 0.2)
     --nav-background-level-2: rgba(0,0,0,0.1)
     --glass-background-color: rgba(255,255,255,.3)
+
+\:root
+    --gap: .6rem
+    --card-border-radius: 3rem
+    --card-padding: 3rem

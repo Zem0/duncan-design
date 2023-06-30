@@ -1,0 +1,16 @@
+.card,
+.card *
+    transition: all .8s cubic-bezier(0.175,0.885,0.32,1.275)
+
+.card
+    background: #fff
+    height: 15rem
+    font-size: 8rem
+    overflow: hidden
+    // .card__icon
+    //     font-size: 17rem
+    //     transform: translate(50%, 10%)
+    &:hover
+        transform: translateY(-.5rem)
+        .card__icon
+            transform: translateY(1rem)
