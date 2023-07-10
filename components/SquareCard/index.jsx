@@ -1,11 +1,21 @@
+'use client';
+
 import Section from '../Section';
 import { styled } from 'styled-components';
+import squareCardStyles from  './index.module.sass';
 
-const SquareCard = styled(Section).attrs(props => ({
+const Card = styled(Section).attrs(props => ({
     className: props.className,
 }))`
-    width: calc(50% - 1.5rem);
     aspect-ratio: 1 / 1;
 `;
+
+const SquareCard = ({children, className}) => {
+    return (
+        <div className={`${squareCardStyles['card-holder']} ${className}`}>
+            <Card>{children}</Card>
+        </div>
+    );
+};
 
 export default SquareCard;
