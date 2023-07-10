@@ -9,6 +9,12 @@ import Polaroid from '../components/Polaroid';
 import HelloImg from '../public/images/hello.png';
 import Image from 'next/image';
 import homeStyles from '../styles/Home.module.sass';
+import TimelineList from '../components/TimelineList';
+import Map from '../public/images/map.png';
+import SquareCard from '../components/SquareCard';
+import Folds from '../public/images/folds.png';
+import FilesCard from '../components/FilesCard';
+import RowWrapper from '../components/RowWrapper';
 
 export default function Home() {
     return (
@@ -16,7 +22,7 @@ export default function Home() {
             <Head>
                 <title>{siteTitle}</title>
             </Head>
-            <section className={`${utilStyles.flex} ${utilStyles['flex-align-center']} ${homeStyles.card}`}>
+            <section className={`${utilStyles.flex} ${utilStyles['flex-align-end']} ${homeStyles.card}`}>
                 <Polaroid />
                 <Image
                     src={HelloImg}
@@ -29,8 +35,26 @@ export default function Home() {
             <Section heading='About' icon={IdentificationCard} notes >
                 <p>This thing comes fully loaded. AM/FM radio, reclining bucket seats, and... power windows. Did he just throw my cat out of the window? God help us, we&apos;re in the hands of engineers. God help us, we&apos;re in the hands of engineers. You know what? It is beets. I&apos;ve crashed into a beet truck.</p>
             </Section>
-            <Section heading='Work' icon={Briefcase} >
-                <p>This thing comes fully loaded. AM/FM radio, reclining bucket seats, and... power windows. Did he just throw my cat out of the window? God help us, we&apos;re in the hands of engineers. God help us, we&apos;re in the hands of engineers. You know what? It is beets. I&apos;ve crashed into a beet truck.</p>
+            <RowWrapper>
+                <SquareCard className={`${homeStyles['map-card']}`}>
+                    <Image
+                        src={Map}
+                        priority={true}
+                        alt='A map showing the south of England and northern France'
+                        className={`${homeStyles['map-card__img']}`}
+                    />
+                    <Image
+                        src={Folds}
+                        priority={true}
+                        alt='transparent gradients to look like fold creases'
+                        className={`${homeStyles['map-card__folds']}`}
+                    />
+                    <div className={`${homeStyles['map-card__dot']}`}></div>
+                </SquareCard>
+                <FilesCard />
+            </RowWrapper>
+            <Section heading='Work' icon={Briefcase}>
+                <TimelineList />
             </Section>
             <section className={`${utilStyles['text-two-column-oversized']} ${utilStyles.grid}`}>
                 {/* <div>

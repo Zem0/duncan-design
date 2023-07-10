@@ -17,7 +17,7 @@ export default function Polaroid() {
             <h1 className={`${polaroidStyles['polaroid__heading']} ${utilStyles.flex} ${utilStyles['flex-align-baseline']}`}>
                 Duncan
                 <SealCheck className={`${polaroidStyles['polaroid__verified-icon']}`} weight='fill'/>
-                <span className={`${polaroidStyles['polaroid__location']}`}>W Sussex, UK</span>
+                <span className={`${polaroidStyles['polaroid__location']} ${utilStyles['mono-type']}`}>W Sussex, UK</span>
             </h1>
             <p>Designer, Front-end Developer &amp; some other things in between</p>
         </div>

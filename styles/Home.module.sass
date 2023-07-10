@@ -1,3 +1,42 @@
 .card__hello-text
+    margin-block-end: 1.5rem
     transform: rotate(-9deg)
 
+.map-card
+    box-shadow: rgba(102, 102, 102, 0.1) 0px 10px 20px, 0 0 0 .1rem rgba(0,0,0,.05)
+
+    .map-card__img
+        height: auto
+        border-radius: calc(var(--card-border-radius) - var(--card-padding))
+        position: relative
+        &::after
+            z-index-10
+            content: ''
+            position: absolute
+            inset: 0
+            border: 2rem solid rgba(0,0,0,1)
+            border-radius: calc(var(--card-border-radius) - var(--card-padding))
+
+    .map-card__folds
+        position: absolute
+        height: auto
+        inset: 0
+
+    .map-card__dot
+        position: absolute
+        width: 4rem
+        height: 4rem
+        inset: 0
+        margin: auto
+        border-radius: 50%
+        background: #FF2D55
+        border: .5rem solid #FFFFFF
+        box-shadow: 0 .7rem .9rem rgba(0,0,0,.3)
+        animation: pulse 2.5s infinite
+        @keyframes pulse
+            0%
+                box-shadow: 0 0 0 0 rgba(#ff2d55,.8), 0 .7rem .9rem rgba(0,0,0,.3)
+            70%
+                box-shadow: 0 0 0 10px rgba(#ff2d55,0), 0 .7rem .9rem rgba(0,0,0,.3)
+            100%
+                box-shadow: 0 0 0 0 rgba(#ff2d55,0), 0 .7rem .9rem rgba(0,0,0,.3)

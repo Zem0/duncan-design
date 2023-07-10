@@ -1,12 +1,11 @@
 .section
+    position: relative
     width: 100%
+    overflow: hidden
     background: var(--foreground-color)
     border-radius: var(--card-border-radius)
     padding: var(--card-padding)
-    box-shadow: rgba(102, 102, 102, 0.1) 0px 10px 20px
-
-
-
+    box-shadow: rgba(102, 102, 102, 0.1) 0px 10px 16px, 0 15px 40px rgba(166,173,201,0.2)
     &__icon
 
 .section--w-heading
@@ -22,9 +21,15 @@
         padding: var(--card-padding)
         padding-bottom: calc(var(--card-padding) / 2)
         padding-top: calc(var(--card-padding) / 1.2)
+    .section__icon
+        font-size: 3.5rem
 
 .section--notes
     background: var(--notes-color-lighter)
     .section__heading
         color: var(--notes-color)
         border-bottom: .3rem solid var(--notes-color-light)
+
+.section--Work
+    h2
+        color: #5855D7

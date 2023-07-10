@@ -1,0 +1,46 @@
+.card
+    --card-padding: 1.5rem
+    gap: var(--card-padding)
+    justify-content: stretch
+    aspect-ratio: unset !important
+
+.file-item
+    align-items: center
+    background: rgba(0,0,0,.05)
+    padding: var(--card-padding)
+    border-radius: calc(var(--card-border-radius) - var(--card-padding))
+    &:hover
+        animation: softshake 2s forwards
+    @keyframes softshake
+        0%
+            transform: rotateZ(0deg)
+        4%
+            transform: rotateZ(4deg)
+        8%
+            transform: rotateZ(1deg)
+        13%
+            transform: rotateZ(-0.7deg)
+        30%
+            transform: rotateZ(0.4deg)
+        45%
+            transform: rotateZ(-0.2deg)
+        80%
+            transform: rotateZ(0.08deg)
+        100%
+            transform: rotateZ(0deg)
+
+    .file-item__img
+        height: auto
+        width: 36%
+        aspect-ratio: 1 / 1
+        box-shadow: 0 10px 10px rgba(0,0,0,0.5)
+        clip-path: url('#squircle')
+        @media (min-width: 45em)
+            width: 40%
+
+    .file-item__subheading
+        font-size: 1.6rem
+
+.file-item__link
+    // height: calc(50% - var(--card-padding))
+    height: auto
