@@ -4,9 +4,7 @@ import utilStyles from '../styles/utils.module.sass';
 import { Briefcase, IdentificationCard } from '@phosphor-icons/react';
 import React from 'react';
 import Section from '../components/Section';
-// import IconCard from '../components/IconCard';
 import Polaroid from '../components/Polaroid';
-import HelloImg from '../public/images/hello.png';
 import Image from 'next/image';
 import homeStyles from '../styles/Home.module.sass';
 import TimelineList from '../components/TimelineList';
@@ -15,6 +13,7 @@ import SquareCard from '../components/SquareCard';
 import Folds from '../public/images/folds.png';
 import FilesCard from '../components/FilesCard';
 import RowWrapper from '../components/RowWrapper';
+import HelloText from '../components/HelloText';
 
 export default function Home() {
     return (
@@ -22,15 +21,9 @@ export default function Home() {
             <Head>
                 <title>{siteTitle}</title>
             </Head>
-            <section className={`${utilStyles.flex} ${utilStyles['flex-align-end']} ${homeStyles.card}`}>
+            <section className={`${utilStyles.flex} ${utilStyles['flex-align-end']} ${homeStyles.card} ${homeStyles['card--intro']}`}>
                 <Polaroid />
-                <Image
-                    src={HelloImg}
-                    width={420}
-                    priority={true}
-                    alt='hello text in a cursive font'
-                    className={`${homeStyles['card__hello-text']}`}
-                />
+                <HelloText className={`${homeStyles['hello_sticker']}`} />
             </section>
             <Section heading='About' icon={IdentificationCard} notes >
                 <p>This thing comes fully loaded. AM/FM radio, reclining bucket seats, and... power windows. Did he just throw my cat out of the window? God help us, we&apos;re in the hands of engineers. God help us, we&apos;re in the hands of engineers. You know what? It is beets. I&apos;ve crashed into a beet truck.</p>
