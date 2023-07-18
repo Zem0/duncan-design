@@ -14,6 +14,7 @@ import Folds from '../public/images/folds.png';
 import FilesCard from '../components/FilesCard';
 import RowWrapper from '../components/RowWrapper';
 import HelloText from '../components/HelloText';
+import Navigation from '../components/Navigation';
 
 export default function Home() {
     return (
@@ -21,11 +22,12 @@ export default function Home() {
             <Head>
                 <title>{siteTitle}</title>
             </Head>
+            <Navigation />
             <section className={`${utilStyles.flex} ${utilStyles['flex-align-end']} ${homeStyles.card} ${homeStyles['card--intro']}`}>
                 <Polaroid />
                 <HelloText className={`${homeStyles['hello_sticker']}`} />
             </section>
-            <Section heading='About' icon={IdentificationCard} notes >
+            <Section id='about' heading='About' icon={IdentificationCard} notes >
                 <p>This thing comes fully loaded. AM/FM radio, reclining bucket seats, and... power windows. Did he just throw my cat out of the window? God help us, we&apos;re in the hands of engineers. God help us, we&apos;re in the hands of engineers. You know what? It is beets. I&apos;ve crashed into a beet truck.</p>
             </Section>
             <RowWrapper>
@@ -46,7 +48,7 @@ export default function Home() {
                 </SquareCard>
                 <FilesCard />
             </RowWrapper>
-            <Section heading='Work' icon={Briefcase}>
+            <Section id='work' heading='Work' icon={Briefcase}>
                 <TimelineList />
             </Section>
             <section className={`${utilStyles['text-two-column-oversized']} ${utilStyles.grid}`}>

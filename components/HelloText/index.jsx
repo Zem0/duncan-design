@@ -15,19 +15,19 @@ export default function HelloText({className}) {
             <svg className={`${helloTextStyles['text_holder__svg']}`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1257 487">
                 <defs>
                     <linearGradient id='a' gradientUnits='objectBoundingBox' x1='0' y1='0' x2='1' y2='1'>
-                        <stop offset='0' stopColor='red'>
+                        <stop offset='0' stopColor='#FF2D55'>
                             <animate attributeName="stop-color"
-                                values="red;DarkViolet;DodgerBlue;green;yellow;orange;red;" dur="20s" repeatCount="indefinite">
+                                values="#FF2D55;DarkViolet;DodgerBlue;#00FF31;yellow;orange;#FF2D55;" dur="20s" repeatCount="indefinite">
                             </animate>
                         </stop>
                         <stop offset='.5' stopColor='DarkViolet'>
                             <animate attributeName="stop-color"
-                                values="DarkViolet;DodgerBlue;green;yellow;orange;red;DarkViolet;" dur="20s" repeatCount="indefinite">
+                                values="DarkViolet;DodgerBlue;#00FF31;yellow;orange;#FF2D55;DarkViolet;" dur="20s" repeatCount="indefinite">
                             </animate>
                         </stop>
                         <stop offset='1' stopColor='DodgerBlue'>
                             <animate attributeName="stop-color"
-                                values="DodgerBlue;green;yellow;orange;red;DarkViolet;DodgerBlue;" dur="20s" repeatCount="indefinite">
+                                values="DodgerBlue;#00FF31;yellow;orange;#FF2D55;DarkViolet;DodgerBlue;" dur="20s" repeatCount="indefinite">
                             </animate>
                         </stop>
                         <animateTransform attributeName="gradientTransform" type="rotate" from="0 .5 .5" to="360 .5 .5"
@@ -35,14 +35,14 @@ export default function HelloText({className}) {
                     </linearGradient>
 
                     <linearGradient id='b' gradientUnits='objectBoundingBox' x1='0' y1='1' x2='1' y2='1'>
-                        <stop offset='0' stopColor='red'>
+                        <stop offset='0' stopColor='#FF2D55'>
                             <animate attributeName="stop-color"
-                                values="red;DarkViolet;DodgerBlue;green;yellow;orange;red;" dur="20s" repeatCount="indefinite">
+                                values="#FF2D55;DarkViolet;DodgerBlue;#00FF31;yellow;orange;#FF2D55;" dur="20s" repeatCount="indefinite">
                             </animate>
                         </stop>
-                        <stop offset='1' stopColor='purple' stopOpacity="0">
+                        <stop offset='1' stopColor='#BA39FF' stopOpacity="0">
                             <animate attributeName="stop-color"
-                                values="DarkViolet;DodgerBlue;green;yellow;orange;red;purple;" dur="20s" repeatCount="indefinite">
+                                values="DarkViolet;DodgerBlue;#00FF31;yellow;orange;#FF2D55;#BA39FF;" dur="20s" repeatCount="indefinite">
                             </animate>
                         </stop>
                         <animateTransform attributeName="gradientTransform" type="rotate" values="360 .5 .5;0 .5 .5"
