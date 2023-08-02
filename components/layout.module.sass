@@ -43,8 +43,10 @@
 
     .main-content
         gap: var(--card-padding)
-        padding: 5rem 0 8rem
+        padding: 0 0 8rem
         grid-column: main-start/main-end
+        @media (min-width: 768px)
+            padding: 5rem 0 8rem
 
     .header
         display: flex

@@ -5,8 +5,9 @@
     position: sticky
     top: 0
     padding-top: 3rem
-    font-size: 2.6rem
     color: var(--secondary-text-color)
+    @media (min-width: 768px)
+        font-size: 2.6rem
 
     &__list
         position: relative
@@ -46,13 +47,14 @@
             transform: scale(.9)
             background-color: transparent
             transition: transform .3s cubic-bezier(.4,0,.2,1), background-color .3s cubic-bezier(.4,0,.2,1)
-        &:hover::before,
         &.active::before
+            background-color: var(--nav-background-level-1)
+    @media (hover: hover)
+        .option:hover::before,
+        .option.active::before
             background-color: var(--nav-background-level-2)
             transform: scale(1)
             transition: transform .3s cubic-bezier(.4,0,.2,1)
-        &.active::before
-            background-color: var(--nav-background-level-1)
 
     .custom-svg-icon g
         fill: var(--secondary-text-color)
