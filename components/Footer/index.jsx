@@ -1,8 +1,8 @@
-import Colophon from '../Colophon';
+// import Colophon from '../Colophon';
 import footerStyles from './index.module.sass';
 import utilStyles from '../../styles/utils.module.sass';
 import Music from '../Music';
-import ThemeControl from '../ThemeControl';
+// import ThemeControl from '../ThemeControl';
 import React from 'react';
 
 export default function Footer() {
