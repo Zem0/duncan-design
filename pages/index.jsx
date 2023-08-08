@@ -28,9 +28,14 @@ export default function Home() {
                 <HelloText className={`${homeStyles['hello_sticker']}`} />
             </section>
             <Section id='about' heading='About' icon={IdentificationCard} notes >
-                <p>This thing comes fully loaded. AM/FM radio, reclining bucket seats, and... power windows. Did he just throw my cat out of the window? God help us, we&apos;re in the hands of engineers. God help us, we&apos;re in the hands of engineers. You know what? It is beets. I&apos;ve crashed into a beet truck.</p>
+                <p>
+                    For over 9 years I have been providing my skills in front-end development and design to Shelton Development Services in the UK. I&apos;m proud to have worn many hats and have worked in various other areas including UI/UX design, email design, graphic design and project management.
+                    <br></br>
+                    <br></br>
+                    I&apos;m now looking for my next role where I can continue working at the intersection of code, design and art and improve my knowledge and exposure to design systems and component libraries.
+                </p>
             </Section>
-            <RowWrapper>
+            {/* <RowWrapper>
                 <SquareCard className={`${homeStyles['map-card']}`}>
                     <Image
                         src={Map}
@@ -47,7 +52,7 @@ export default function Home() {
                     <div className={`${homeStyles['map-card__dot']}`}></div>
                 </SquareCard>
                 <FilesCard />
-            </RowWrapper>
+            </RowWrapper> */}
             <Section id='work' heading='Work' icon={Briefcase}>
                 <TimelineList />
             </Section>

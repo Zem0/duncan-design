@@ -56,12 +56,12 @@ export default function Navigation() {
                         Work
                     </Link>
                 </li>
-                <li>
+                {/* <li>
                     <Link className={`${navStyles.option} ${getActiveRoute(router) == '/projects' ? navStyles.active : ''} ${utilStyles.flex} ${utilStyles['flex-align-center']} ${utilStyles['rounded-m']} ${utilStyles['gap-6']}`} href="#projects">
                         <Images weight='fill'/>
                         Projects
                     </Link>
-                </li>
+                </li> */}
             </ul>
             {/* <h3 className={`${navStyles.subtitle}`}>FIND ME HERE</h3>
             <ul>

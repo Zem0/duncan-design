@@ -12,13 +12,13 @@ export default function Footer() {
                 <Music/>
                 <div className={`${footerStyles['footer__copyright']} ${utilStyles.flex} ${utilStyles['flex-row']} ${utilStyles['gap-15']}`}>
                     <span>© 2023 Duncan Horne</span>
-                    <span className={`${footerStyles['footer__spot']}`}>•</span>
-                    <Colophon/>
+                    {/* <span className={`${footerStyles['footer__spot']}`}>•</span>
+                    <Colophon/> */}
                 </div>
             </div>
-            <div>
+            {/* <div>
                 <ThemeControl/>
-            </div>
+            </div> */}
         </footer>
     );
 }
