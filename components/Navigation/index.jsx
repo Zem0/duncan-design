@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { Briefcase, IdentificationCard, Images } from '@phosphor-icons/react';
+import { Briefcase, IdentificationCard } from '@phosphor-icons/react';
 import navStyles from './index.module.sass';
 import utilStyles from '../../styles/utils.module.sass';
 // import MastodonLogo from '../../public/images/mastodon1.svg';
