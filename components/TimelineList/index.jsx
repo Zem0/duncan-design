@@ -11,15 +11,15 @@ export default function TimelineList() {
         },
         {
             'company': 'Shelton Development Services',
-            'role': 'Product Champion',
+            'role': 'Project Manager',
             'date': '01/2019 - 01/2023',
-            'description': 'Along side my dev role I was also given the opportunity to become the product champion for one of the applications in the company&apos;s portfolio of software.'
+            'description': 'Along side my design role I was also given the opportunity to become the project manager for one of the applications in the company&apos;s portfolio of software.'
         },
         {
             'company': 'Shelton Development Services',
-            'role': 'Front-End Developer',
+            'role': 'UI Designer and Developer',
             'date': '01/2015 - 06/2023',
-            'description': 'I worked within the dev team to help with creating the front-end for the web applications that the company produced, using frameworks such as Angular JS and React. Having the most experience with CSS and SASS in the team, a lot of my focus was working with these technologies as well as peer reviewing and guiding (or quacking for) other members of the team.'
+            'description': 'I helped the team design and implement the UI for two of the leading web applications the company produces for the social housing sector, collaborating within a design team of 4 colleagues and an engineering team of 12. Having the most experience with CSS and SASS in the team, a lot of my focus was working with these technologies as well as peer reviewing and guiding (or quacking 🦆 for) other members of the team.'
         },
         {
             'company': 'Shelton Development Services',

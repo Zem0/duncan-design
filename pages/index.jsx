@@ -29,7 +29,7 @@ export default function Home() {
             </section>
             <Section id='about' heading='About' icon={IdentificationCard} notes >
                 <p>
-                    For over 9 years I have been providing my skills in front-end development and design to Shelton Development Services in the UK. I&apos;m proud to have worn many hats and have worked in various other areas including UI/UX design, email design, graphic design and project management.
+                    For over 9 years I have been providing my skills in design and front-end development to Shelton Development Services in the UK. I&apos;m proud to have worn many hats and have worked in various other areas including UI/UX design, email design, graphic design and project management.
                     <br></br>
                     <br></br>
                     I&apos;m now looking for my next role where I can continue working at the intersection of code, design and art and improve my knowledge and exposure to design systems and component libraries.

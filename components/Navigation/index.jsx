@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { Briefcase, IdentificationCard } from '@phosphor-icons/react';
+import { Briefcase, IdentificationCard, PencilLine } from '@phosphor-icons/react';
 import navStyles from './index.module.sass';
 import utilStyles from '../../styles/utils.module.sass';
 // import MastodonLogo from '../../public/images/mastodon1.svg';
@@ -53,8 +53,14 @@ export default function Navigation() {
                 <li>
                     <Link className={`${navStyles.option} ${getActiveRoute(router) == '/projects' ? navStyles.active : ''} ${utilStyles.flex} ${utilStyles['flex-align-center']} ${utilStyles['rounded-m']} ${utilStyles['gap-6']}`} href="#work">
                         <Briefcase weight='fill'/>
-                        Work
+                        Experience
                     </Link>
+                </li>
+                <li>
+                    <a className={`${navStyles.option} ${getActiveRoute(router) == '/projects' ? navStyles.active : ''} ${utilStyles.flex} ${utilStyles['flex-align-center']} ${utilStyles['rounded-m']} ${utilStyles['gap-6']}`} target="_blank" href="https://www.behance.net/duncanhorne">
+                        <PencilLine weight='fill'/>
+                        Work
+                    </a>
                 </li>
                 {/* <li>
                     <Link className={`${navStyles.option} ${getActiveRoute(router) == '/projects' ? navStyles.active : ''} ${utilStyles.flex} ${utilStyles['flex-align-center']} ${utilStyles['rounded-m']} ${utilStyles['gap-6']}`} href="#projects">
