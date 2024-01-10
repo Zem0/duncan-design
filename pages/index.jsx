@@ -5,14 +5,8 @@ import { Briefcase, IdentificationCard } from '@phosphor-icons/react';
 import React from 'react';
 import Section from '../components/Section';
 import Polaroid from '../components/Polaroid';
-// import Image from 'next/image';
 import homeStyles from '../styles/Home.module.sass';
 import TimelineList from '../components/TimelineList';
-// import Map from '../public/images/map.png';
-// import SquareCard from '../components/SquareCard';
-// import Folds from '../public/images/folds.png';
-// import FilesCard from '../components/FilesCard';
-// import RowWrapper from '../components/RowWrapper';
 import HelloText from '../components/HelloText';
 import Navigation from '../components/Navigation';
 
