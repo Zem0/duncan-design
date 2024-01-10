@@ -25,7 +25,7 @@ export default function TimelineList() {
             'company': 'Shelton Development Services',
             'role': 'Graphic Designer',
             'date': '01/2014 - 01/2015',
-            'description': 'I began my design career at SDS designing e-shots, brochures and a refresh of the company\'s logo amongst other things. Working in the Dev team lead me to start coding, initially learning HTML, CSS, Javascript and JQuery. i was then asked to design and implement a refresh of the SDS website'
+            'description': 'I began my design career at SDS designing e-shots, brochures and a refresh of the company\'s logo amongst other things. Working in the Dev team lead me to start coding, initially learning HTML, CSS, Javascript and JQuery. I was then asked to design and implement a refresh of the SDS website'
         }
     ];
     return (
