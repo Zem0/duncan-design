@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 export const siteTitle = 'Duncan Design';
 
-export default function Layout({ children, home }) {
+export default function Layout({ children, home, additionalClassName }) {
     return (
         <div className={`${layoutStyles.container} ${utilStyles.flex} ${utilStyles['flex-column']}`}>
             <Head>
@@ -25,7 +25,7 @@ export default function Layout({ children, home }) {
                 <meta name="twitter:card" content="summary_large_image" />
             </Head>
             <div className={`${layoutStyles['page-holder']} ${utilStyles.flex} ${utilStyles['flex-column']}`}>
-                <main className={`${utilStyles.flex} ${utilStyles['flex-column']} ${layoutStyles['main-content-holder']}`}>
+                <main className={`${utilStyles.flex} ${utilStyles['flex-column']} ${layoutStyles['main-content-holder']} ${additionalClassName}`}>
                     <div className={`${layoutStyles['main-content']} ${utilStyles.flex} ${utilStyles['flex-column']}`}>
                         {children}
                         {!home && (

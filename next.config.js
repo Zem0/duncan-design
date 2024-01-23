@@ -1,6 +1,16 @@
 const path = require('path');
 
 module.exports = {
+    images: {
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'dyweauwosjjahwbmhpiw.supabase.co',
+                // port: '',
+                // pathname: '/account123/**',
+            },
+        ],
+    },
     webpack(config) {
         // Grab the existing rule that handles SVG imports
         const fileLoaderRule = config.module.rules.find((rule) =>
