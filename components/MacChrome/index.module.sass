@@ -1,3 +1,7 @@
+.section
+    display: grid
+    grid-template-columns: [full-start] minmax(8vmin, auto) [wide-start] minmax(auto, 240px) [main-start] min(1184px,100% - 16vmin) [main-end] minmax(auto, 240px) [wide-end] minmax(8vmin, auto) [full-end]
+
 .chrome
     margin: 0 !important
     position: relative
@@ -11,6 +15,9 @@
     background-color: rgba(51, 51, 51, 0.1)
     backdrop-filter: blur(20px) saturate(200%)
     box-shadow: var(--card-shadow)
+    grid-column-start: main-start
+    grid-column-end: main-end
+
     > *
         // padding: 1.5rem
         z-index: 1

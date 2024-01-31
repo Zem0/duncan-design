@@ -11,7 +11,7 @@ export default function Footer() {
             <div>
                 <Music/>
                 <div className={`${footerStyles['footer__copyright']} ${utilStyles.flex} ${utilStyles['flex-row']} ${utilStyles['gap-15']}`}>
-                    <span>© 2023 Duncan Horne</span>
+                    <span>© 2024 Duncan Horne</span>
                     {/* <span className={`${footerStyles['footer__spot']}`}>•</span>
                     <Colophon/> */}
                 </div>

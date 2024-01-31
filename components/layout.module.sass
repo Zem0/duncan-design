@@ -38,11 +38,9 @@
         flex: 1
 
     .main-content-holder
-        display: grid
-        grid-template-columns: [full-start] minmax(8vmin, auto) [wide-start] minmax(auto, 240px) [main-start] min(800px,100% - 16vmin) [main-end] minmax(auto, 240px) [wide-end] minmax(8vmin, auto) [full-end]
 
     .main-content
-        gap: var(--card-padding)
+        gap: calc(var(--gap) * 9)
         padding: 0 0 8rem
         grid-column: main-start/main-end
         @media (min-width: 768px)

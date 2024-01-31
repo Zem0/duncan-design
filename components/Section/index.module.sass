@@ -1,4 +1,10 @@
 .section
+    width: 100%
+    height: auto
+    display: grid
+    grid-template-columns: [full-start] minmax(8vmin, auto) [wide-start] minmax(auto, 240px) [main-start] min(800px,100% - 16vmin) [main-end] minmax(auto, 240px) [wide-end] minmax(8vmin, auto) [full-end]
+
+.card
     max-width: 80rem
     margin: auto
     position: relative
@@ -8,13 +14,16 @@
     border-radius: var(--card-border-radius)
     padding: var(--card-padding)
     box-shadow: var(--card-shadow)
+    grid-column-start: main-start
+    grid-column-end: main-end
     &__icon
 
-.section--w-heading
+.card--w-heading
     padding: 0
     > *
         padding: var(--card-padding)
-    .section__heading
+    .card__heading
+        color: #5855D7
         width: 100%
         border-bottom: .3rem solid rgba(0,0,0,.1)
         margin: 0
@@ -23,15 +32,16 @@
         padding: var(--card-padding)
         padding-bottom: calc(var(--card-padding) / 2)
         padding-top: calc(var(--card-padding) / 1.2)
-    .section__icon
+    .card__icon
         font-size: 3.5rem
 
-.section--notes
+.card--notes
+    color: var(--notes-text-color)
     background: var(--notes-color-lighter)
-    .section__heading
+    .card__heading
         color: var(--notes-color)
         border-bottom: .3rem solid var(--notes-color-light)
 
-.section--Work
+.card--Work
     h2
         color: #5855D7

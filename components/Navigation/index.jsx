@@ -42,28 +42,28 @@ export default function Navigation() {
     // }
 
     return (
-        <nav className={`${navStyles.navigation} ${utilStyles.flex} ${utilStyles['flex-justify-end']}`}>
+        <nav className={`${navStyles.navigation}`}>
             <ul className={`${navStyles.navigation__list} ${utilStyles.flex} ${utilStyles['flex-row']}`}>
                 <li>
-                    <Link className={`${navStyles.option} ${getActiveRoute(router) == '/posts/first-post' ? navStyles.active : ''} ${utilStyles.flex} ${utilStyles['flex-align-center']} ${utilStyles['rounded-m']} ${utilStyles['gap-6']}`} href="#about">
+                    <Link className={`${navStyles.option} ${getActiveRoute(router) == '/posts/first-post' ? navStyles.active : ''} ${utilStyles.flex} ${utilStyles['flex-align-center']} ${utilStyles['rounded-m']} ${utilStyles['gap-1']}`} href="#about">
                         <IdentificationCard weight='fill'/>
                         About
                     </Link>
                 </li>
                 <li>
-                    <Link className={`${navStyles.option} ${getActiveRoute(router) == '/projects' ? navStyles.active : ''} ${utilStyles.flex} ${utilStyles['flex-align-center']} ${utilStyles['rounded-m']} ${utilStyles['gap-6']}`} href="#work">
+                    <Link className={`${navStyles.option} ${getActiveRoute(router) == '/projects' ? navStyles.active : ''} ${utilStyles.flex} ${utilStyles['flex-align-center']} ${utilStyles['rounded-m']} ${utilStyles['gap-1']}`} href="#work">
                         <Briefcase weight='fill'/>
                         Experience
                     </Link>
                 </li>
                 <li>
-                    <a className={`${navStyles.option} ${getActiveRoute(router) == '/projects' ? navStyles.active : ''} ${utilStyles.flex} ${utilStyles['flex-align-center']} ${utilStyles['rounded-m']} ${utilStyles['gap-6']}`} target="_blank" href="https://www.behance.net/duncanhorne">
+                    <a className={`${navStyles.option} ${getActiveRoute(router) == '/projects' ? navStyles.active : ''} ${utilStyles.flex} ${utilStyles['flex-align-center']} ${utilStyles['rounded-m']} ${utilStyles['gap-1']}`} target="_blank" href="https://www.behance.net/duncanhorne">
                         <PencilLine weight='fill'/>
                         Work
                     </a>
                 </li>
                 {/* <li>
-                    <Link className={`${navStyles.option} ${getActiveRoute(router) == '/projects' ? navStyles.active : ''} ${utilStyles.flex} ${utilStyles['flex-align-center']} ${utilStyles['rounded-m']} ${utilStyles['gap-6']}`} href="#projects">
+                    <Link className={`${navStyles.option} ${getActiveRoute(router) == '/projects' ? navStyles.active : ''} ${utilStyles.flex} ${utilStyles['flex-align-center']} ${utilStyles['rounded-m']} ${utilStyles['gap-1']}`} href="#projects">
                         <Images weight='fill'/>
                         Projects
                     </Link>
@@ -72,19 +72,19 @@ export default function Navigation() {
             {/* <h3 className={`${navStyles.subtitle}`}>FIND ME HERE</h3>
             <ul>
                 <li>
-                    <Link className={`${navStyles.option} ${getActiveRoute(router) == "/projects" ? navStyles.active : ""} ${utilStyles.flex} ${utilStyles['flex-align-center']} ${utilStyles['rounded-m']} ${utilStyles['gap-6']}`} href="https://mastodon.design/@duncandesi9n" target="_blank">
+                    <Link className={`${navStyles.option} ${getActiveRoute(router) == "/projects" ? navStyles.active : ""} ${utilStyles.flex} ${utilStyles['flex-align-center']} ${utilStyles['rounded-m']} ${utilStyles['gap-1']}`} href="https://mastodon.design/@duncandesi9n" target="_blank">
                         <MastodonLogo className={`${utilStyles['fill-white']} ${navStyles['custom-svg-icon']}`}/>
                         Mastodon
                     </Link>
                 </li>
                 <li>
-                    <Link className={`${navStyles.option} ${getActiveRoute(router) == "/projects" ? navStyles.active : ""} ${utilStyles.flex} ${utilStyles['flex-align-center']} ${utilStyles['rounded-m']} ${utilStyles['gap-6']}`} href="https://dribbble.com/DuncanDesign" target="_blank">
+                    <Link className={`${navStyles.option} ${getActiveRoute(router) == "/projects" ? navStyles.active : ""} ${utilStyles.flex} ${utilStyles['flex-align-center']} ${utilStyles['rounded-m']} ${utilStyles['gap-1']}`} href="https://dribbble.com/DuncanDesign" target="_blank">
                         <DribbbleLogo weight={getActiveRoute(router) == "/posts/first-post" ? "fill" : "duotone"}/>
                         Dribbble
                     </Link>
                 </li>
                 <li>
-                    <Link className={`${navStyles.option} ${getActiveRoute(router) == "/projects" ? navStyles.active : ""} ${utilStyles.flex} ${utilStyles['flex-align-center']} ${utilStyles['rounded-m']} ${utilStyles['gap-6']}`} href="https://twitter.com/duncandesi9n" target="_blank">
+                    <Link className={`${navStyles.option} ${getActiveRoute(router) == "/projects" ? navStyles.active : ""} ${utilStyles.flex} ${utilStyles['flex-align-center']} ${utilStyles['rounded-m']} ${utilStyles['gap-1']}`} href="https://twitter.com/duncandesi9n" target="_blank">
                         <TwitterLogo weight={getActiveRoute(router) == "/posts/first-post" ? "fill" : "duotone"}/>
                         Twitter
                     </Link>
