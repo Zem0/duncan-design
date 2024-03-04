@@ -7,13 +7,22 @@ import React from 'react';
 
 export default function Footer() {
     return(
-        <footer className={`${footerStyles.footer} ${utilStyles.flex} ${utilStyles['flex-row']} ${utilStyles['main-content-padding']}`}>
-            <div>
-                <Music/>
-                <div className={`${footerStyles['footer__copyright']} ${utilStyles.flex} ${utilStyles['flex-row']} ${utilStyles['gap-15']}`}>
-                    <span>© 2024 Duncan Horne</span>
+        <footer className={`${footerStyles.footer} ${utilStyles.grid} ${utilStyles['grid-area-main']}`}>
+            <div className={`${footerStyles['footer__content']} ${utilStyles['grid-area-main']}`}>
+                <div className={`${footerStyles['footer__music']}`}>
+                    <Music/>
+                    <span>©2014-2024 Duncan Horne</span>
                     {/* <span className={`${footerStyles['footer__spot']}`}>•</span>
                     <Colophon/> */}
+                </div>
+                <div className={`${footerStyles['footer__links']} ${utilStyles.flex} ${utilStyles['flex-row']} ${utilStyles['gap-15']}`}>
+                    <ul className={`${footerStyles['footer__links__list']}`}>
+                        <li><h6>Elsewhere</h6></li>
+                        <li><a href='https://mastodon.design/@duncandesi9n' target='_blank'>Mastodon</a></li>
+                        <li><a href='https://dribbble.com/DuncanDesign' target='_blank'>Dribbble</a></li>
+                        <li><a href='https://instagram.com/duncandesi9n' target='_blank'>Twitter</a></li>
+                        <li><a href='mailto:duncan@duncandesign.online'>duncan@duncandesign.online</a></li>
+                    </ul>
                 </div>
             </div>
             {/* <div>

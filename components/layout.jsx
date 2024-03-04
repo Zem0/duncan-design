@@ -3,7 +3,6 @@ import Head from 'next/head';
 import layoutStyles from './layout.module.sass';
 import utilStyles from '../styles/utils.module.sass';
 import FooterContent from './Footer';
-import Link from 'next/link';
 
 export const siteTitle = 'Duncan Design';
 
@@ -28,11 +27,6 @@ export default function Layout({ children, home, additionalClassName }) {
                 <main className={`${utilStyles.flex} ${utilStyles['flex-column']} ${layoutStyles['main-content-holder']} ${additionalClassName}`}>
                     <div className={`${layoutStyles['main-content']} ${utilStyles.flex} ${utilStyles['flex-column']}`}>
                         {children}
-                        {!home && (
-                            <div>
-                                <Link href="/">← Back to home</Link>
-                            </div>
-                        )}
                     </div>
                 </main>
                 <FooterContent/>

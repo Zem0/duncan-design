@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { Briefcase, IdentificationCard, PencilLine } from '@phosphor-icons/react';
+import { Briefcase, IdentificationCard, PencilLine, Placeholder } from '@phosphor-icons/react';
 import navStyles from './index.module.sass';
 import utilStyles from '../../styles/utils.module.sass';
 // import MastodonLogo from '../../public/images/mastodon1.svg';
@@ -44,23 +44,28 @@ export default function Navigation() {
     return (
         <nav className={`${navStyles.navigation}`}>
             <ul className={`${navStyles.navigation__list} ${utilStyles.flex} ${utilStyles['flex-row']}`}>
+                <li className={`${navStyles['home-icon']}`}>
+                    <Link className={`${navStyles.option} ${getActiveRoute(router) == '/' ? navStyles.active : ''} ${navStyles.home} ${utilStyles.flex} ${utilStyles['flex-align-center']} ${utilStyles['rounded-m']} ${utilStyles['gap-1']}`} href="/">
+                        <Placeholder weight='fill'/>
+                    </Link>
+                </li>
                 <li>
-                    <Link className={`${navStyles.option} ${getActiveRoute(router) == '/posts/first-post' ? navStyles.active : ''} ${utilStyles.flex} ${utilStyles['flex-align-center']} ${utilStyles['rounded-m']} ${utilStyles['gap-1']}`} href="#about">
+                    <Link className={`${navStyles.option} ${getActiveRoute(router) == '/posts/first-post' ? navStyles.active : ''} ${utilStyles.flex} ${utilStyles['flex-align-center']} ${utilStyles['rounded-m']} ${utilStyles['gap-1']}`} href="/#about">
                         <IdentificationCard weight='fill'/>
                         About
                     </Link>
                 </li>
                 <li>
-                    <Link className={`${navStyles.option} ${getActiveRoute(router) == '/projects' ? navStyles.active : ''} ${utilStyles.flex} ${utilStyles['flex-align-center']} ${utilStyles['rounded-m']} ${utilStyles['gap-1']}`} href="#work">
+                    <Link className={`${navStyles.option} ${utilStyles.flex} ${utilStyles['flex-align-center']} ${utilStyles['rounded-m']} ${utilStyles['gap-1']}`} href="/#work">
                         <Briefcase weight='fill'/>
                         Experience
                     </Link>
                 </li>
                 <li>
-                    <a className={`${navStyles.option} ${getActiveRoute(router) == '/projects' ? navStyles.active : ''} ${utilStyles.flex} ${utilStyles['flex-align-center']} ${utilStyles['rounded-m']} ${utilStyles['gap-1']}`} target="_blank" href="https://www.behance.net/duncanhorne">
+                    <Link className={`${navStyles.option} ${getActiveRoute(router) == '/projects' ? navStyles.active : ''} ${utilStyles.flex} ${utilStyles['flex-align-center']} ${utilStyles['rounded-m']} ${utilStyles['gap-1']}`} href="/projects">
                         <PencilLine weight='fill'/>
                         Work
-                    </a>
+                    </Link>
                 </li>
                 {/* <li>
                     <Link className={`${navStyles.option} ${getActiveRoute(router) == '/projects' ? navStyles.active : ''} ${utilStyles.flex} ${utilStyles['flex-align-center']} ${utilStyles['rounded-m']} ${utilStyles['gap-1']}`} href="#projects">

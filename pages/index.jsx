@@ -18,8 +18,8 @@ export default function Home() {
                 <title>{siteTitle}</title>
             </Head>
             <Navigation />
-            <section className={`${utilStyles.grid} ${utilStyles['grid-normal']}`}>
-                <div className={`${utilStyles.flex} ${utilStyles['flex-align-stretch']} ${utilStyles['grid-area-main']} ${utilStyles['flex-justify-stretch']} ${utilStyles['gap-2']} ${homeStyles.card} ${homeStyles['card--intro']}`}>
+            <section className={`${utilStyles.grid} ${homeStyles['sticker-section']}`}>
+                <div className={`${utilStyles.flex} ${utilStyles['flex-align-stretch']} ${utilStyles['grid-area-main']} ${utilStyles['flex-justify-stretch']} ${utilStyles['gap-2']} ${homeStyles.card} ${homeStyles['sticker-section__polaroid']}`}>
                     <Polaroid />
                     <Stickers />
                 </div>

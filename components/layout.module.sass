@@ -36,6 +36,7 @@
 
     .page-holder
         flex: 1
+        min-height: 100vh
 
     .main-content-holder
 
@@ -45,6 +46,10 @@
         grid-column: main-start/main-end
         @media (min-width: 768px)
             padding: 5rem 0 8rem
+        @media (max-width: 768px)
+            gap: calc(var(--gap) * 6)
+        @media (max-width: 568px)
+            gap: calc(var(--gap) * 4)
 
     .header
         display: flex

@@ -1,7 +1,11 @@
-.card--intro
+.sticker-section
+    grid-template-columns: var(--default-grid)
+
+.sticker-section__polaroid
     flex-direction: column-reverse
-    gap: 3rem
+    gap: 6rem
     @media (min-width: 872px)
+        gap: 3rem
         flex-direction: row
 
 .map-card
@@ -43,3 +47,7 @@
                 box-shadow: 0 0 0 10px rgba(#ff2d55,0), 0 .7rem .9rem rgba(0,0,0,.3)
             100%
                 box-shadow: 0 0 0 0 rgba(#ff2d55,0), 0 .7rem .9rem rgba(0,0,0,.3)
+
+@media screen and (max-width: 760px)
+    .sticker-section
+        grid-template-columns: var(--mobile-grid)

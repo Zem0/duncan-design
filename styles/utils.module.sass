@@ -83,13 +83,10 @@
 .grid-col-gap-1
     grid-column-gap: calc(var(--gap) * 4)
 
-@media (min-width:800px)
-    .grid-cols-2
-        grid-template-columns: repeat(2,minmax(0,1fr))
-
-@media (min-width:1024px)
-    .grid-cols-3
-        grid-template-columns: repeat(3,minmax(0,1fr))
+.general-image
+    width: 100%
+    height: auto
+    border-radius: var(--card-border-radius)
 
 .heading2Xl
     font-size: 2.5rem
@@ -153,6 +150,10 @@
 
 .z-1
     z-index: 1
+
+@media screen and (max-width: 760px)
+    .remove-for-mobile
+        display: none
 
 @media screen and (min-width: 1140px)
     .text-two-column

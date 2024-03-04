@@ -5,7 +5,7 @@ import Navigation from '../../components/Navigation';
 import Section from '../../components/Section';
 import MacChrome from '../../components/MacChrome';
 import Image from 'next/image';
-import { Bookmark, Database, Table } from '@phosphor-icons/react';
+import { Bookmark, Database, Table, StopCircle, PenNib } from '@phosphor-icons/react';
 import projectStyles from '../../styles/projects.module.sass';
 import Columns from '../../components/Columns';
 
@@ -38,6 +38,7 @@ export default function HomeMatch() {
                         <br></br>
                         The goal was to produce two separate areas of the app - a public facing portal where users could register and fill out a questionnaire, and a staff area where data could be viewed and added regarding applications, schemes and properties.
                     </em>
+                    <PenNib weight='fill'/>
                 </p>
             </Section>
             <MacChrome>
@@ -92,10 +93,9 @@ export default function HomeMatch() {
             <Section icon={Table}>
                 <p>
                     The final UI for creating reports resulted in a panel where the user can paste the ID for a Google Worksheet to link up with. They can then create sheets within this workbook, shown in the UI as list items that could be expanded. Here the sheet can be given a title and code written to display the data required. The data can be previewed in a table so the user doesn&apos;t have to keep navigating to the sheet to see updates.
+                    <StopCircle weight='fill'/>
                 </p>
             </Section>
         </Layout>
     );
 }
-
-// HomeMatch.pageClass = 'HM';
