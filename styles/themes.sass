@@ -61,3 +61,8 @@
     --default-grid: [full-start] minmax(8vmin, auto) [wide-start] minmax(auto, 240px) [main-start] min(800px,100% - 16vmin) [main-end] minmax(auto, 240px) [wide-end] minmax(8vmin, auto) [full-end]
     --image-grid: [full-start] minmax(8vmin, auto) [wide-start] minmax(auto, 240px) [main-start] min(1332px,100% - 16vmin) [main-end] minmax(auto, 240px) [wide-end] minmax(8vmin, auto) [full-end]
     --mobile-grid: [full-start] minmax(11px, 11px) [wide-start] minmax(11px, 11px) [main-start] min(980px, 100% - 44px) [main-end] minmax(11px, 11px) [wide-end] minmax(11px, 11px) [full-end]
+
+@media only screen and (width: 375px) and (-webkit-device-pixel-ratio: 2)
+    \:root
+        --card-padding: 2rem
+        --card-border-radius: 3rem
