@@ -18,6 +18,9 @@
     /* 1179×2556 pixels at 460ppi eg. iPhone 14 Pro Max*/
     @media only screen and (width: 430px) and (-webkit-device-pixel-ratio: 3)
         font-size: 1.6rem
+    /* 750×1334 pixels at 326ppi eg. iPhone SE */
+    @media only screen and (width: 375px) and (-webkit-device-pixel-ratio: 2)
+        font-size: 1.4rem
 
     &__list
         width: max-content
@@ -49,6 +52,8 @@
         li:not(.home-icon)
             svg
                 @media only screen and (width: 430px) and (-webkit-device-pixel-ratio: 3)
+                    display: none
+                @media only screen and (width: 375px) and (-webkit-device-pixel-ratio: 2)
                     display: none
 
     .option

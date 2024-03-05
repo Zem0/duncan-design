@@ -1,5 +1,7 @@
 .timeline
     margin-trim: block-end
+    @media only screen and (width: 375px) and (-webkit-device-pixel-ratio: 2)
+        padding-left: calc(var(--card-padding / 2))
 
 .timeline__item
     grid-template-columns: max-content 1fr

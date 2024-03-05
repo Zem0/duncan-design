@@ -7,6 +7,8 @@
     max-width: 38rem
     min-width: 38rem
     box-shadow: var(--card-shadow)
+    @media only screen and (width: 375px) and (-webkit-device-pixel-ratio: 2)
+        min-width: unset
 
     .polaroid__photo
         border-radius: 1rem
@@ -33,3 +35,5 @@
         margin-left: auto
         opacity: .5
         font-weight: 700
+        @media only screen and (width: 375px) and (-webkit-device-pixel-ratio: 2)
+            margin-left: unset

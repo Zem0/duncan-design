@@ -12,19 +12,19 @@ export default function TimelineList() {
         {
             'company': 'Shelton Development Services',
             'role': 'Project Manager',
-            'date': '01/2019 - 01/2023',
+            'date': 'Jan 2019 - Jan 2023',
             'description': 'Along side my design role I was also given the opportunity to become the project manager for one of the applications in the company&apos;s portfolio of software.'
         },
         {
             'company': 'Shelton Development Services',
             'role': 'UI Designer and Developer',
-            'date': '01/2015 - 06/2023',
+            'date': 'Jan 2015 - Jun 2023',
             'description': 'I helped the team design and implement the UI for two of the leading web applications the company produces for the social housing sector, collaborating within a design team of 4 colleagues and an engineering team of 12. Having the most experience with CSS and SASS in the team, a lot of my focus was working with these technologies as well as peer reviewing and guiding (or quacking 🦆 for) other members of the team.'
         },
         {
             'company': 'Shelton Development Services',
             'role': 'Graphic Designer',
-            'date': '01/2014 - 01/2015',
+            'date': 'Jan 2014 - Jan 2015',
             'description': 'I began my design career at SDS designing e-shots, brochures and a refresh of the company\'s logo amongst other things. Working in the Dev team lead me to start coding, initially learning HTML, CSS, Javascript and JQuery. I was then asked to design and implement a refresh of the SDS website'
         }
     ];

@@ -22,6 +22,7 @@ export default function Layout({ children, additionalClassName }) {
                 <meta name="og:title" content="Duncan Horne" />
                 <meta name="og:site_name" content={siteTitle} />
                 <meta name="twitter:card" content="summary_large_image" />
+                <meta name="format-detection" content="telephone=no" />
             </Head>
             <div className={`${layoutStyles['page-holder']} ${utilStyles.flex} ${utilStyles['flex-column']}`}>
                 <main className={`${utilStyles.flex} ${utilStyles['flex-column']} ${layoutStyles['main-content-holder']} ${additionalClassName}`}>
