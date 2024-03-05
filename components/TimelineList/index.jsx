@@ -13,7 +13,7 @@ export default function TimelineList() {
             'company': 'Shelton Development Services',
             'role': 'Project Manager',
             'date': 'Jan 2019 - Jan 2023',
-            'description': 'Along side my design role I was also given the opportunity to become the project manager for one of the applications in the company&apos;s portfolio of software.'
+            'description': 'Along side my design role I was also given the opportunity to become the project manager for one of the applications in the company\'s portfolio of software.'
         },
         {
             'company': 'Shelton Development Services',
