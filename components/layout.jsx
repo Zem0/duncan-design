@@ -6,7 +6,7 @@ import FooterContent from './Footer';
 
 export const siteTitle = 'Duncan Design';
 
-export default function Layout({ children, home, additionalClassName }) {
+export default function Layout({ children, additionalClassName }) {
     return (
         <div className={`${layoutStyles.container} ${utilStyles.flex} ${utilStyles['flex-column']}`}>
             <Head>

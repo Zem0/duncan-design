@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Layout from '../../components/layout';
 import Section from '../../components/Section';
 import Navigation from '../../components/Navigation';
-import { Devices, PaintBrush, PawPrint, ArticleNyTimes, FolderNotchOpen } from '@phosphor-icons/react';
+import { Devices, PaintBrush, ArticleNyTimes, FolderNotchOpen } from '@phosphor-icons/react';
 
 export default function FirstPost() {
     return (
