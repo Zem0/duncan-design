@@ -2,7 +2,6 @@ import utilStyles from '../../styles/utils.module.sass';
 import musicStyles from './index.module.sass';
 import AppleMusicLogo from '../../public/images/appleMusic.svg';
 import { React, useEffect, useState } from 'react';
-import Link from 'next/link';
 
 export default function Music() {
     const tracks = [
