@@ -2,7 +2,7 @@
 import footerStyles from './index.module.sass';
 import utilStyles from '../../styles/utils.module.sass';
 import Music from '../Music';
-import { DribbbleLogo, TwitterLogo, Link, EnvelopeOpen } from '@phosphor-icons/react';
+import { DribbbleLogo, TwitterLogo, Link, EnvelopeOpen, Globe } from '@phosphor-icons/react';
 // import ThemeControl from '../ThemeControl';
 import React from 'react';
 
@@ -13,8 +13,9 @@ export default function Footer() {
                 <div className={`${footerStyles['footer__music']}`}>
                     <Music/>
                     <span>©2014-2024 Duncan Horne</span>
-                    {/* <span className={`${footerStyles['footer__spot']}`}>•</span>
-                    <Colophon/> */}
+                    <span className={`${footerStyles['footer__spot']}`}> • </span>
+                    <span>v2.0</span>
+                    {/* <Colophon/> */}
                 </div>
                 <div className={`${footerStyles['footer__links']} ${utilStyles.flex} ${utilStyles['flex-row']} ${utilStyles['gap-15']}`}>
                     <ul className={`${footerStyles['footer__links__list']}`}>
@@ -23,6 +24,7 @@ export default function Footer() {
                         <li><a href='https://dribbble.com/DuncanDesign' target='_blank'><DribbbleLogo weight='fill'/> Dribbble</a></li>
                         <li><a href='https://instagram.com/duncandesi9n' target='_blank'><TwitterLogo weight='fill'/> Twitter</a></li>
                         <li><a href='mailto:duncan@duncandesign.online'><EnvelopeOpen weight='fill'/> duncan@duncandesign.online</a></li>
+                        <li><a href='https://duncan-design.appspot.com' target='_blank'><Globe weight='fill'/> v1</a></li>
                     </ul>
                 </div>
             </div>
