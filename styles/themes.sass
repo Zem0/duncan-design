@@ -7,6 +7,7 @@
     --notes-color-light: hsla(45, 99%, 27%, 0.13)
     --notes-color-lighter: #FFF9EB
     --notes-border-color: transparentize(#{$beige}, 50%)
+    --notes-text-color: rgba(102, 51, 0, 1)
     --primary-background-color: #{$primary-background-color-light}
     // --secondary-background-color:
     --primary-text-color: #{$fifth-color}
@@ -21,6 +22,7 @@
     --notes-color-light: #FFF9EB
     --notes-color-lighter: #FFF9EB
     --notes-border-color: transparentize(, )
+    --notes-text-color: rgba(102, 51, 0, 1)
     --primary-background-color: #{$primary-color-dark}
     --secondary-background-color: #{$primary-color-dark}
     --primary-text-color: #{$second-color}
@@ -35,6 +37,7 @@
     --notes-color-light: #FFF9EB
     --notes-color-lighter: #FFF9EB
     --notes-border-color: transparentize(, )
+    --notes-text-color: rgba(102, 51, 0, 1)
     --primary-background-color: #{$primary-color-light}
     --secondary-background-color: #{$second-color}
     --primary-text-color: #{$fifth-color}
@@ -44,8 +47,17 @@
     --glass-background-color: rgba(255,255,255,.3)
 
 \:root
+    --link: 88,85,215
+    --link-active: 255, 0, 127
+    --link-hover: 0, 152, 228
+    --link-visited: 187, 66, 255
     --gap: .6rem
+    --info-table-fontsize: 1.8rem
     --card-border-radius: 4rem
     --card-padding: 3rem
     --card-shadow: rgba(102, 102, 102, 0.1) 0px 10px 16px, 0 15px 40px rgba(166,173,201,0.2), 0 0 0 .2rem rgba(166,173,201,0.08)
     --sticker-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2), 0px 2px 2px rgba(0, 0, 0, 0.1)
+    --mobile-width: 760px
+    --default-grid: [full-start] minmax(8vmin, auto) [wide-start] minmax(auto, 240px) [main-start] min(800px,100% - 16vmin) [main-end] minmax(auto, 240px) [wide-end] minmax(8vmin, auto) [full-end]
+    --image-grid: [full-start] minmax(8vmin, auto) [wide-start] minmax(auto, 240px) [main-start] min(1332px,100% - 16vmin) [main-end] minmax(auto, 240px) [wide-end] minmax(8vmin, auto) [full-end]
+    --mobile-grid: [full-start] minmax(11px, 11px) [wide-start] minmax(11px, 11px) [main-start] min(980px, 100% - 44px) [main-end] minmax(11px, 11px) [wide-end] minmax(11px, 11px) [full-end]

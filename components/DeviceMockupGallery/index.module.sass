@@ -1,0 +1,22 @@
+.imageSection
+    width: 100%
+    height: auto
+    display: grid
+    overflow: visible
+    grid-template-columns: var(--image-grid)
+    .imageSection__img
+        display: grid
+        gap: calc(var(--gap) * 4)
+        grid-column-start: main-start
+        grid-column-end: main-end
+        grid-template-columns: repeat(3,1fr)
+        > *
+            height: auto
+        img
+            filter: drop-shadow(rgba(102, 102, 102, 0.1) 0px 10px 16px) drop-shadow(0 15px 40px rgba(166,173,201,0.2)) drop-shadow(0 0 0 rgba(166,173,201,0.08))
+
+@media screen and (max-width: 760px)
+    .imageSection
+        grid-template-columns: var(--mobile-grid)
+        .imageSection__img
+            grid-template-columns: repeat(2,1fr)

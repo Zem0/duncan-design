@@ -1,6 +1,6 @@
 @import '/styles/themes.sass'
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@200..800&display=swap')
-@import url('https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300..700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap')
 
 *
     box-sizing: border-box
@@ -11,10 +11,10 @@ body
     margin: 0
     scroll-behavior: smooth !important
     color: var(--primary-text-color)
-    font-family: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+    font-family: 'Space Mono', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
     Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif
     line-height: 1.6
-    font-size: 1.7rem
+    font-size: 2rem
     font-weight: 400
     letter-spacing: .05rem
     background: var(--primary-background-color)
@@ -23,14 +23,47 @@ body
         line-height: 1.5
         font-size: 2.2rem
 
-// aside
-
 a
-    text-decoration: none
-    color: var(--primary-text-color)
+    font-weight: bold
+    text-decoration: underline
+    color: rgba(var(--link), 1)
+    text-decoration-color: rgba(var(--link), .5)
+    text-underline-offset: .125em
+    text-decoration-thickness: .125em
+    &:hover,
+    &:visited:hover
+        cursor: pointer
+        color: rgba(var(--link-hover), 1)
+        text-decoration-color: rgba(var(--link-hover), .5)
+    &:visited
+        color: rgba(var(--link-visited), 1)
+        text-decoration-color: rgba(var(--link-visited), .5)
+    &:active
+        color: rgba(var(--link-active), 1)
+        text-decoration-color: rgba(var(--link-active), .5)
 
-a:hover
-    text-decoration: none
+blockquote
+    font-style: italic
+    margin: 1rem var(--card-padding)
+    padding: 1.4rem 2rem 2rem 2rem
+    color: var(--notes-color)
+    background-color: var(--notes-color-light)
+    background-color: rgba(0,0,0,0.05)
+    border-left: .6rem solid var(--notes-color)
+    border-radius: .6rem
+    cite
+        color: var(--notes-text-color)
+        font-size: 1.6rem
+        font-style: normal
+        font-weight: normal
+
+.reference-links
+    word-break: break-all
+    font-size: 1.6rem
+
+hr
+    border: 0 solid var(--notes-color-light)
+    border-top-width: .3rem
 
 img
     max-width: 100%
@@ -42,6 +75,9 @@ ul
 
 li
     list-style-type: none
+
+// ul > ul li
+//     list-style-type: square
 
 .my-node
     color: red
@@ -87,5 +123,8 @@ h6,
 p
     margin: 0
 
-h2
-    font-variation-settings: 'wght' 800
+h3
+    font-size: 2.4rem
+
+h6
+    font-size: 1.6rem

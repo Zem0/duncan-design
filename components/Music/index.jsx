@@ -2,7 +2,6 @@ import utilStyles from '../../styles/utils.module.sass';
 import musicStyles from './index.module.sass';
 import AppleMusicLogo from '../../public/images/appleMusic.svg';
 import { React, useEffect, useState } from 'react';
-import Link from 'next/link';
 
 export default function Music() {
     const tracks = [
@@ -52,11 +51,11 @@ export default function Music() {
     return (
         <div className={`${musicStyles['music-info-holder']} ${utilStyles.flex} ${utilStyles['flex-align-center']} ${utilStyles['gap-15']}`}>
             <AppleMusicLogo className={`${musicStyles['music-info-holder__apple-logo']}`}/>
-            <div>
+            <div className={`${musicStyles['music-info-holder__info']}`}>
                 <div>On repeat</div>
-                <Link href={tracks[randomNumber].url} target="_blank">
+                <a href={tracks[randomNumber].url} target="_blank">
                     <div className={`${musicStyles['music-info-holder__track']}`}>{tracks[randomNumber].name} by {tracks[randomNumber].artist}</div>
-                </Link>
+                </a>
             </div>
         </div>
     );

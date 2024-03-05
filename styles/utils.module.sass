@@ -15,14 +15,27 @@
 .fg-1
     flex-grow: 1
 
-.gap-6
-    gap: .6rem
+.gap-1
+    gap: var(--gap)
+
+.gap-2
+    gap: calc(var(--gap) * 2)
 
 .gap-15
     gap: 1.5rem
 
 .gap-main-flow
     gap: var(--card-padding)
+
+.grid
+    display: grid
+
+.grid-area-main
+    grid-column-start: main-start
+    grid-column-end: main-end
+
+.grid-normal
+    grid-template-columns: [full-start] minmax(8vmin, auto) [wide-start] minmax(auto, 240px) [main-start] min(800px,100% - 16vmin) [main-end] minmax(auto, 240px) [wide-end] minmax(8vmin, auto) [full-end]
 
 .rel
     position: relative
@@ -45,8 +58,17 @@
 .flex-align-start
     align-items: flex-start
 
+.flex-align-stretch
+    align-items: stretch
+
+.flex-justify-center
+    justify-content: center
+
 .flex-justify-end
     justify-content: end
+
+.flex-justify-stretch
+    justify-content: stretch
 
 .fully-aligned
     align-items: center
@@ -61,13 +83,10 @@
 .grid-col-gap-1
     grid-column-gap: calc(var(--gap) * 4)
 
-@media (min-width:800px)
-    .grid-cols-2
-        grid-template-columns: repeat(2,minmax(0,1fr))
-
-@media (min-width:1024px)
-    .grid-cols-3
-        grid-template-columns: repeat(3,minmax(0,1fr))
+.general-image
+    width: 100%
+    height: auto
+    border-radius: var(--card-border-radius)
 
 .heading2Xl
     font-size: 2.5rem
@@ -131,6 +150,10 @@
 
 .z-1
     z-index: 1
+
+@media screen and (max-width: 760px)
+    .remove-for-mobile
+        display: none
 
 @media screen and (min-width: 1140px)
     .text-two-column

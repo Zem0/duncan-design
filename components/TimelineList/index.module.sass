@@ -6,11 +6,12 @@
     grid-template-rows: max-content 1fr
     grid-column-gap: 1rem
     position: relative
+    padding-block-end: unset
     &::after
         content: ""
         display: block
         width: .2rem
-        background: #f2f2f2
+        background: #0ACE82
         align-self: stretch
         justify-self: center
 
@@ -22,7 +23,7 @@
         width: 3rem
         height: 3rem
         position: relative
-        border: .3rem solid #f2f2f2
+        border: .3rem solid #0ACE82
         border-radius: 100%
 
     .timeline__content
@@ -46,10 +47,13 @@
         .timeline__dot::after
             content: ""
             display: block
-            width: 2rem
-            height: 2rem
+            width: 1.6rem
+            height: 1.6rem
             border-radius: 50%
             inset: 0
             position: absolute
             margin: auto
-            background-color: #f2f2f2
+            background-color: #0ACE82
+
+li.timeline__item
+    padding-block-end: unset

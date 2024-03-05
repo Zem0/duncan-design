@@ -1,0 +1,54 @@
+.main-content-holder
+    > div > *
+        // margin: 0 100px
+        // width: auto
+
+.screenshot
+    height: auto
+
+.two-image-row
+    &__img
+        width: calc(50% - (var(--gap)*4))
+        height: auto
+
+.two-image-row,
+.three-image-row
+    > div
+        gap: calc(var(--gap)*4)
+
+.three-image-row
+    > div
+        gap: calc(var(--gap)*7)
+    &__img
+        width: calc(33.3% - (var(--gap)*7))
+        height: auto
+        border-radius: calc(var(--card-border-radius)/2)
+    @media screen and (max-width: 980px)
+        > div
+            gap: calc(var(--gap)*4)
+        &__img
+            width: calc(33.3% - (var(--gap)*4))
+    @media screen and (max-width: 825px)
+        > div
+            gap: calc(var(--gap)*4)
+        &__img
+            width: calc(50% - (var(--gap)*4))
+    @media screen and (max-width: 760px)
+        > div
+            gap: calc(var(--gap)*6)
+        &__img
+            border-radius: var(--card-border-radius)
+
+.info-table
+    font-size: var(--info-table-fontsize)
+    &__timeline
+        width: 40%
+        &__heading
+            white-space: nowrap
+
+@media screen and (max-width: 760px)
+    .two-image-row
+        > div
+            gap: calc(var(--gap)*9)
+    .two-image-row__img
+        width: 100%

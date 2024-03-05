@@ -1,15 +1,28 @@
 @import '../../styles/variables'
 
 .navigation
+    width: 100%
+    // max-width: 80rem
     z-index: 100000000
     position: sticky
     top: 0
     padding-top: 3rem
     color: var(--secondary-text-color)
+    display: grid
+    justify-items: end
+    grid-template-columns: [full-start] minmax(8vmin, auto) [wide-start] minmax(auto, 240px) [main-start] min(800px,100% - 16vmin) [main-end] minmax(auto, 240px) [wide-end] minmax(8vmin, auto) [full-end]
     @media (min-width: 768px)
         font-size: 2.6rem
+    @media (max-width: 658px)
+        justify-items: center
+    /* 1179×2556 pixels at 460ppi eg. iPhone 14 Pro Max*/
+    @media only screen and (width: 430px) and (-webkit-device-pixel-ratio: 3)
+        font-size: 1.6rem
 
     &__list
+        width: max-content
+        grid-column-start: main-start
+        grid-column-end: main-end
         position: relative
         padding: 1rem
         border-radius: 100px
@@ -22,16 +35,25 @@
             display: block
             border-radius: 100px
             position: absolute
-            top: -.1rem
-            left: 0
-            width: 100%
-            height: 100%
+            // top: -.1rem
+            // left: 0
+            // width: 100%
+            // height: 100%
             z-index: 1
             background: rgba(255, 255, 255, 0.6)
             backdrop-filter: blur(20px) saturate(200%)
+            top: .2rem
+            left: .2rem
+            width: calc(100% - .4rem)
+            height: calc(100% - .4rem)
+        li:not(.home-icon)
+            svg
+                @media only screen and (width: 430px) and (-webkit-device-pixel-ratio: 3)
+                    display: none
 
     .option
         z-index: 1
+        height: 100%
         position: relative
         padding-block: $gap
         padding-inline: calc($gap * 3)
@@ -59,7 +81,21 @@
     .custom-svg-icon g
         fill: var(--secondary-text-color)
 
+    .home
+        > svg
+            transform: rotate(90deg)
+
     .subtitle
         padding-left: $gap
         font-size: 1.1rem
         opacity: .6
+
+    a
+        text-decoration: none
+        font-weight: normal
+        color: rgba(var(--primary-text-color), 1)
+        &:hover,
+        &:visited:hover
+            color: rgba(var(--primary-text-color), 1)
+        &:visited
+            color: rgba(var(--primary-text-color), 1)
