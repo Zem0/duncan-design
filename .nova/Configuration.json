@@ -2,6 +2,6 @@
   "apexskier.eslint.config.eslintConfigPath" : ".eslintrc.json",
   "apexskier.eslint.config.eslintPath" : ".eslintrc.json",
   "apexskier.eslint.config.fixOnSave" : "Enable",
-  "workspace.color" : 9,
+  "workspace.color" : 5,
   "workspace.name" : "DuncanDesign"
 }
