@@ -1,26 +1,10 @@
 // client.js
-import {createClient}  from '@sanity/client';
 
-export const client = createClient({
-  projectId: '0962e80m',
-  dataset: 'production',
+import sanityClient from '@sanity/client';
+
+export default sanityClient({
+  projectId: '0962e80m', // you can find this in sanity.json
+  dataset: 'production', // or the name you chose in step 1
   apiVersion: '2024-05-01',
-  useCdn: false // `false` if you want to ensure fresh data
+  useCdn: true // `false` if you want to ensure fresh data
 });
-
-export async function getPosts() {
-  const posts = await client.fetch('*[_type == "post"]');
-  return posts;
-}
-
-// export async function getStaticPaths() {
-//   console.log(client);
-//   const paths = await client.fetch(
-//     '*[_type == "post" && defined(slug.current)][].slug.current'
-//   );
-
-//   return {
-//     paths: paths.map((slug) => ({params: {slug}})),
-//     fallback: true,
-//   };
-// }

@@ -3,6 +3,13 @@ import imageUrlBuilder from '@sanity/image-url';
 import {PortableText} from '@portabletext/react';
 import client from '../../sanity/lib/client';
 
+import ImageSection from '../../components/ImageSection';
+import Layout from '../../components/layout';
+import Section from '../../components/Section';
+
+import projectStyles from '../../styles/projects.module.sass';
+import { ArticleNyTimes } from '@phosphor-icons/react';
+
 function urlFor (source) {
   return imageUrlBuilder(client).image(source);
 }
@@ -33,30 +40,34 @@ const Post = ({post}) => {
     body = []
   } = post;
   return (
-    <article>
-      <h1>{title}</h1>
-      <span>By {name}</span>
-      {categories && (
-        <ul>
-          Posted in
-          {categories.map(category => <li key={category}>{category}</li>)}
-        </ul>
-      )}
-      {authorImage && (
-        <div>
-          <img
-            src={urlFor(authorImage)
-              .width(50)
-              .url()}
-            alt={`${name}'s picture`}
+    <Layout homematch additionalClassName={`${projectStyles['main-content-holder']}`}>
+      <Section heading={title} icon={ArticleNyTimes} notes>
+        <article>
+          <h1>{title}</h1>
+          <span>By {name}</span>
+          {categories && (
+            <ul>
+              Posted in
+              {categories.map(category => <li key={category}>{category}</li>)}
+            </ul>
+          )}
+          {authorImage && (
+            <div>
+              <img
+                src={urlFor(authorImage)
+                  .width(50)
+                  .url()}
+                alt={`${name}'s picture`}
+              />
+            </div>
+          )}
+          <PortableText
+            value={body}
+            components={ptComponents}
           />
-        </div>
-      )}
-      <PortableText
-        value={body}
-        components={ptComponents}
-      />
-    </article>
+        </article>
+      </Section>
+    </Layout>
   );
 };
 
