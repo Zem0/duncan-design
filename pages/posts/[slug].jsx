@@ -2,13 +2,18 @@ import groq from 'groq';
 import imageUrlBuilder from '@sanity/image-url';
 import {PortableText} from '@portabletext/react';
 import client from '../../sanity/lib/client';
+import Image from 'next/image';
+const BlockContent = require('@sanity/block-content-to-react');
 
+import Head from 'next/head';
+import Navigation from '../../components/Navigation';
 import ImageSection from '../../components/ImageSection';
 import Layout from '../../components/layout';
 import Section from '../../components/Section';
+// import serializer from '../../components/serializer';
 
-import projectStyles from '../../styles/projects.module.sass';
-import { ArticleNyTimes } from '@phosphor-icons/react';
+import blogStyles from '../../styles/blog.module.sass';
+import utilStyles from '../../styles/utils.module.sass';
 
 function urlFor (source) {
   return imageUrlBuilder(client).image(source);
@@ -21,13 +26,18 @@ const ptComponents = {
         return null;
       }
       return (
-        <img
+        <Image
           alt={value.alt || ' '}
           loading="lazy"
-          src={urlFor(value).width(320).height(240).fit('max').auto('format')}
+          width={320}
+          height={240}
+          quality={100}
+          className={`${blogStyles['post-img']}`}
+          src={urlFor(value).auto('format').url()}
         />
       );
-    }
+    },
+    hr: () => <hr className={`${blogStyles['custom-hr']}`} />,
   }
 };
 
@@ -36,35 +46,42 @@ const Post = ({post}) => {
     title = 'Missing title',
     name = 'Missing name',
     categories,
-    authorImage,
+    mainImage,
+    publishedAt,
     body = []
   } = post;
   return (
-    <Layout homematch additionalClassName={`${projectStyles['main-content-holder']}`}>
-      <Section heading={title} icon={ArticleNyTimes} notes>
-        <article>
-          <h1>{title}</h1>
-          <span>By {name}</span>
+    <Layout homematch additionalClassName={`${blogStyles['main-content-holder']}`}>
+      <Head>
+          <title>{title}</title>
+      </Head>
+      <Navigation />
+      {mainImage && (
+        <ImageSection>
+          <Image
+            src={urlFor(mainImage).url()}
+            alt={`${name}'s picture`}
+            width={688}
+            height={393}
+            className={`${utilStyles['general-image']}`}
+          />
+        </ImageSection>
+
+      )}
+      <Section heading={title} notes additionalClasses={`${blogStyles['post-section']}`}>
+        <article className={`${blogStyles['post']}`}>
           {categories && (
-            <ul>
-              Posted in
-              {categories.map(category => <li key={category}>{category}</li>)}
+            <ul className={`${'tag-list'}`}>
+              <li className={`${'tag'}`}>{new Date(publishedAt).toLocaleDateString('en-GB')}</li>
+              {categories.map(category => <li key={category} className={`${'tag'} ${category}`}>{category.toUpperCase()}</li>)}
             </ul>
-          )}
-          {authorImage && (
-            <div>
-              <img
-                src={urlFor(authorImage)
-                  .width(50)
-                  .url()}
-                alt={`${name}'s picture`}
-              />
-            </div>
           )}
           <PortableText
             value={body}
             components={ptComponents}
+            type={{ type: 'blockContent' }}
           />
+          <BlockContent></BlockContent>
         </article>
       </Section>
     </Layout>
@@ -75,7 +92,10 @@ const query = groq`*[_type == "post" && slug.current == $slug][0]{
   title,
   "name": author->name,
   "categories": categories[]->title,
+  publishedAt,
   "authorImage": author->image,
+  mainImage,
+  "image": image.asset->url,
   body
 }`;
 
