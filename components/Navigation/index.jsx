@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { Briefcase, IdentificationCard, PencilLine, Placeholder } from '@phosphor-icons/react';
+import { Briefcase, IdentificationCard, PencilLine, Placeholder, PenNib } from '@phosphor-icons/react';
 import navStyles from './index.module.sass';
 import utilStyles from '../../styles/utils.module.sass';
 // import MastodonLogo from '../../public/images/mastodon1.svg';
@@ -67,12 +67,12 @@ export default function Navigation() {
                         Work
                     </Link>
                 </li>
-                {/* <li>
-                    <Link className={`${navStyles.option} ${getActiveRoute(router) == '/projects' ? navStyles.active : ''} ${utilStyles.flex} ${utilStyles['flex-align-center']} ${utilStyles['rounded-m']} ${utilStyles['gap-1']}`} href="#projects">
-                        <Images weight='fill'/>
-                        Projects
+                <li>
+                    <Link className={`${navStyles.option} ${getActiveRoute(router) == '/posts' ? navStyles.active : ''} ${utilStyles.flex} ${utilStyles['flex-align-center']} ${utilStyles['rounded-m']} ${utilStyles['gap-1']}`} href="/posts">
+                        <PenNib weight='fill'/>
+                        Posts
                     </Link>
-                </li> */}
+                </li>
             </ul>
             {/* <h3 className={`${navStyles.subtitle}`}>FIND ME HERE</h3>
             <ul>

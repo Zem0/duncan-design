@@ -19,6 +19,8 @@
     background-image: repeating-linear-gradient(to right,var(--notes-text-color),/* Dot color */ var(--notes-text-color) 2px,/* Dot width */ transparent 1px,/* Gap starts */ transparent 6px /* Gap width */)
     height: 2px
     margin: 0px 8px
+    @media screen and (max-width: 623px)
+        display: none
 
 .post-img
     width: 50%
@@ -31,6 +33,8 @@
 .post-item
     display: flex
     align-items: first baseline
+    @media screen and (max-width: 623px)
+        flex-direction: column
 
 .screenshot
     height: auto
