@@ -54,6 +54,7 @@ const Post = ({post}) => {
     <Layout homematch additionalClassName={`${blogStyles['main-content-holder']}`}>
       <Head>
           <title>{title}</title>
+          <meta name="og:title" content={title} />
       </Head>
       <Navigation />
       {mainImage && (
