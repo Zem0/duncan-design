@@ -5,7 +5,7 @@ import Section from '../../components/Section';
 import Navigation from '../../components/Navigation';
 import { Devices, PaintBrush, ArticleNyTimes, FolderNotchOpen } from '@phosphor-icons/react';
 
-export default function FirstPost() {
+export default function ProjectList() {
     return (
         <Layout>
             <Head>

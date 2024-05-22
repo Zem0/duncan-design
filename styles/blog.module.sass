@@ -1,10 +1,40 @@
+.post-section
+    h2
+        font-size: 3rem !important
+
 .main-content-holder
     > div > *
         // margin: 0 100px
         // width: auto
 
-.post p:not(:last-of-type)
+.post > *:not(p:last-of-type)
     margin-block-end: 2.5rem
+
+.post-date
+    font-size: 1.6rem
+
+.post-line
+    min-width: 2rem
+    flex-grow: 1
+    background-image: repeating-linear-gradient(to right,var(--notes-text-color),/* Dot color */ var(--notes-text-color) 2px,/* Dot width */ transparent 1px,/* Gap starts */ transparent 6px /* Gap width */)
+    height: 2px
+    margin: 0px 8px
+    @media screen and (max-width: 623px)
+        display: none
+
+.post-img
+    width: 50%
+    min-width: 29.6rem
+    height: auto
+    border-radius: 2rem
+    margin-inline: auto
+    box-shadow: 0 10px 16px rgba(99, 86, 5, 0.23), 0 15px 40px rgba(193, 181, 0, 0.3), 0 0 0 0.2rem rgba(138, 132, 10, 0.08)
+
+.post-item
+    display: flex
+    align-items: first baseline
+    @media screen and (max-width: 623px)
+        flex-direction: column
 
 .screenshot
     height: auto

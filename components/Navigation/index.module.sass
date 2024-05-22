@@ -9,18 +9,22 @@
     padding-top: 3rem
     color: var(--secondary-text-color)
     display: grid
-    justify-items: end
+    justify-items: center
     grid-template-columns: [full-start] minmax(8vmin, auto) [wide-start] minmax(auto, 240px) [main-start] min(800px,100% - 16vmin) [main-end] minmax(auto, 240px) [wide-end] minmax(8vmin, auto) [full-end]
     @media (min-width: 768px)
         font-size: 2.6rem
-    @media (max-width: 658px)
-        justify-items: center
+    @media only screen and (max-width: 884px)
+        font-size: 2rem
     /* 1179×2556 pixels at 460ppi eg. iPhone 14 Pro Max*/
     @media only screen and (width: 430px) and (-webkit-device-pixel-ratio: 3)
         font-size: 1.6rem
     /* 750×1334 pixels at 326ppi eg. iPhone SE */
     @media only screen and (width: 375px) and (-webkit-device-pixel-ratio: 2)
         font-size: 1.4rem
+
+    li:not(.home-icon) a svg
+        @media (max-width: 658px)
+            display: none
 
     &__list
         width: max-content
@@ -63,6 +67,10 @@
         padding-block: $gap
         padding-inline: calc($gap * 3)
         color: var(--secondary-text-color)
+        @media only screen and (width: 430px) and (-webkit-device-pixel-ratio: 3)
+            padding-inline: calc($gap * 2)
+        @media only screen and (width: 375px) and (-webkit-device-pixel-ratio: 2)
+            padding-inline: calc($gap * 2)
         &::before
             position: absolute
             content: ""

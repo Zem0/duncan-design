@@ -1,18 +1,10 @@
+import globals from "globals";
+import pluginJs from "@eslint/js";
+import pluginReactConfig from "eslint-plugin-react/configs/recommended.js";
+
+
 export default [
-    {
-        rules: {
-            semi: [
-                "error",
-                "always"
-            ],
-            quotes: [
-                "error",
-                "single"
-            ],
-            'react/prop-types': "off"
-        },
-        plugins: [
-            "react"
-        ]
-    }
-]
+  {languageOptions: { globals: globals.browser }},
+  pluginJs.configs.recommended,
+  pluginReactConfig,
+];

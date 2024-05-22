@@ -51,6 +51,8 @@ blockquote
     background-color: rgba(0,0,0,0.05)
     border-left: .6rem solid var(--notes-color)
     border-radius: .6rem
+    .notes &
+        background-color: #fff2d5
     cite
         color: var(--notes-text-color)
         font-size: 1.6rem
@@ -98,6 +100,30 @@ li
 
 .my-node-exit-done
     opacity: 0
+
+/*  ———————————————————————————————————————————————————————————————————————————
+    TAGS
+    ——————————————————————————————————————————————————————————————————————————— */
+
+.tag-list
+    display: flex
+    gap: var(--gap)
+
+.tag
+    // padding-block-end: 0 !important
+    padding: 0.1rem .9rem 0.3rem .9rem !important
+    border-radius: .4rem
+    width: fit-content
+    font-style: normal
+    font-weight: bold
+    font-size: 1.5rem
+    color: #FFF
+    text-shadow: 0 .1rem .3rem #9e0025
+    background: linear-gradient(#fd4671, #EC1B4B)
+    &.Comics
+        color: #FFF
+        text-shadow: 0 .1rem .3rem #7116a2
+        background: linear-gradient(#c45dfb, #BC43FF)
 
 /*  ———————————————————————————————————————————————————————————————————————————
     TYPOGRAPHY
