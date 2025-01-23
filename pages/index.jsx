@@ -34,24 +34,6 @@ export default function Home() {
                     </em>
                 </p>
             </Section>
-            {/* <RowWrapper>
-                <SquareCard className={`${homeStyles['map-card']}`}>
-                    <Image
-                        src={Map}
-                        priority={true}
-                        alt='A map showing the south of England and northern France'
-                        className={`${homeStyles['map-card__img']}`}
-                    />
-                    <Image
-                        src={Folds}
-                        priority={true}
-                        alt='transparent gradients to look like fold creases'
-                        className={`${homeStyles['map-card__folds']}`}
-                    />
-                    <div className={`${homeStyles['map-card__dot']}`}></div>
-                </SquareCard>
-                <FilesCard />
-            </RowWrapper> */}
             <Section id='work' heading='Work' icon={Briefcase}>
                 <TimelineList />
             </Section>
