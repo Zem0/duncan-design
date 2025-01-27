@@ -12,7 +12,7 @@ export default function Footer() {
             <div className={`${footerStyles['footer__content']} ${utilStyles['grid-area-main']}`}>
                 <div className={`${footerStyles['footer__music']}`}>
                     <Music/>
-                    <span>©2014-2024 Duncan Horne</span>
+                    <span>©2014-2025 Duncan Horne</span>
                     <span className={`${footerStyles['footer__spot']}`}> • </span>
                     <span>v2.0</span>
                     {/* <Colophon/> */}

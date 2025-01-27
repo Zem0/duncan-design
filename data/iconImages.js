@@ -9,19 +9,19 @@ export const images = [
         url: 'https://dyweauwosjjahwbmhpiw.supabase.co/storage/v1/object/public/portfolio-images/icons/CORAL@1x.jpg',
         width: 1600,
         height: 1200,
-        alt: 'Coral Design'
+        alt: 'Monzo app icon to match their coral card'
     },
     {
         url: 'https://dyweauwosjjahwbmhpiw.supabase.co/storage/v1/object/public/portfolio-images/icons/BLUE@1x.png',
         width: 1600,
         height: 1200,
-        alt: 'Blue Design'
+        alt: 'Monzo app icon to match their blue card'
     },
     {
-        url: 'https://dyweauwosjjahwbmhpiw.supabase.co/storage/v1/object/public/portfolio-images/icons/WHITE@1x.png',
+        url: 'https://dyweauwosjjahwbmhpiw.supabase.co/storage/v1/object/public/portfolio-images/icons/WHITE@1x-edit.png',
         width: 1600,
         height: 1200,
-        alt: 'White Design'
+        alt: 'Monzo app icon to match their white card'
     },
     {
         url: 'https://dyweauwosjjahwbmhpiw.supabase.co/storage/v1/object/public/portfolio-images/icons/ClearHologram.jpg',
@@ -125,4 +125,29 @@ export const images = [
         height: 3000,
         alt: 'App icon for Cocktail Bar'
     },
+    {
+        url: 'https://dyweauwosjjahwbmhpiw.supabase.co/storage/v1/object/public/portfolio-images/icons/MarioWonderTimer.webp',
+        width: 4000,
+        height: 3000,
+        alt: 'App icon inspired by Super Mario Bros Won'
+    },
+    {
+        url: 'https://dyweauwosjjahwbmhpiw.supabase.co/storage/v1/object/public/portfolio-images/icons/SketchSimple.webp',
+        width: 4000,
+        height: 3000,
+        alt: 'Simple app icon for Sketch'
+    },
+    {
+        url: 'https://dyweauwosjjahwbmhpiw.supabase.co/storage/v1/object/public/portfolio-images/icons/AffinityPhoto-Shot.webp',
+        width: 4000,
+        height: 3000,
+        alt: 'Simple app icon for Affinity Photo'
+    },
+    {
+        url: 'https://dyweauwosjjahwbmhpiw.supabase.co/storage/v1/object/public/portfolio-images/icons/AffinityDesigner-Shot.webp',
+        width: 4000,
+        height: 3000,
+        alt: 'Simple app icon for Affinity Designer'
+    },
+
 ];

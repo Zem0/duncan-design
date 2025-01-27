@@ -28,6 +28,9 @@ export default function ProjectList() {
                         <li>
                             <Link href='/projects/icons'>Icon Design</Link>
                         </li>
+                        <li>
+                            <Link href='/projects/heads'>Heads</Link>
+                        </li>
                     </ul>
                     <li><h3><ArticleNyTimes weight='fill' /> Features</h3></li>
                     <ul>
