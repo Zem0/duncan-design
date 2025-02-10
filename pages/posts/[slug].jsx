@@ -7,6 +7,7 @@ const BlockContent = require('@sanity/block-content-to-react');
 
 import Head from 'next/head';
 import Navigation from '../../components/Navigation';
+import MobileNavigation from '../../components/MobileNavigation';
 import ImageSection from '../../components/ImageSection';
 import Layout from '../../components/layout';
 import Section from '../../components/Section';
@@ -85,6 +86,7 @@ const Post = ({post}) => {
           <BlockContent></BlockContent>
         </article>
       </Section>
+      <MobileNavigation />
     </Layout>
   );
 };

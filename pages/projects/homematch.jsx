@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../../components/layout';
 import Head from 'next/head';
 import Navigation from '../../components/Navigation';
+import MobileNavigation from '../../components/MobileNavigation';
 import Section from '../../components/Section';
 import MacChrome from '../../components/MacChrome';
 import Image from 'next/image';
@@ -96,6 +97,7 @@ export default function HomeMatch() {
                     <StopCircle weight='fill'/>
                 </p>
             </Section>
+            <MobileNavigation />
         </Layout>
     );
 }

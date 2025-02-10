@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../../components/layout';
 import Head from 'next/head';
 import Navigation from '../../components/Navigation';
+import MobileNavigation from '../../components/MobileNavigation';
 import Image from 'next/image';
 import projectStyles from '../../styles/projects.module.sass';
 import utilStyles from '../../styles/utils.module.sass';
@@ -47,6 +48,7 @@ export default function Dexie() {
                     />
                 ))}
             </ImageSection>
+            <MobileNavigation />
         </Layout>
     );
 }

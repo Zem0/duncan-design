@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../../components/layout';
 import Head from 'next/head';
 import Navigation from '../../components/Navigation';
+import MobileNavigation from '../../components/MobileNavigation';
 import Section from '../../components/Section';
 import Image from 'next/image';
 import { Bookmark, ListMagnifyingGlass, PenNib, ListBullets, Images, Palette, StopCircle, Calendar, PersonArmsSpread, BaseballCap, PawPrint } from '@phosphor-icons/react';
@@ -261,7 +262,7 @@ export default function Dexie() {
                     alt='A UI design showing the detail view for the Pokémon® Charizard'
                 />
             </DeviceMockupGallery>
-
+            <MobileNavigation />
         </Layout>
     );
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../../components/layout';
 import Head from 'next/head';
 import Navigation from '../../components/Navigation';
+import MobileNavigation from '../../components/MobileNavigation';
 import Section from '../../components/Section';
 import Image from 'next/image';
 import { Bookmark, ListMagnifyingGlass, Calendar, PersonArmsSpread, BaseballCap, CursorClick, Link, Cpu } from '@phosphor-icons/react';
@@ -100,6 +101,7 @@ export default function Dexie() {
                     I have a strong belief in not over engineering something if the project doesn't require it. This page has a simple project setup with 3 main files, for HTML, CSS and Javascript and directories for videos, images and audio. No framework was used in the making of this webpage ;-)
                 </p>
             </Section>
+            <MobileNavigation />
         </Layout>
     );
 }
