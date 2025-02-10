@@ -4,6 +4,7 @@ import client from '../../sanity/lib/client';
 
 import Head from 'next/head';
 import Navigation from '../../components/Navigation';
+import MobileNavigation from '../../components/MobileNavigation';
 import Layout from '../../components/layout';
 import Section from '../../components/Section';
 import { PenNib } from '@phosphor-icons/react';
@@ -33,6 +34,7 @@ const PostList = ({posts}) => {
             )}
           </ul>
         </Section>
+        <MobileNavigation />
       </Layout>
     );
 };

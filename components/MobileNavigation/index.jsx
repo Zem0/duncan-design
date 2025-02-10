@@ -1,17 +1,23 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useEffect, useRef } from 'react';
-import { Briefcase, IdentificationCard, PencilLine, Placeholder, PenNib } from '@phosphor-icons/react';
+import { useEffect, useRef, useState } from 'react';
+import { Briefcase, Hamburger, IdentificationCard, PencilLine, Placeholder, PenNib } from '@phosphor-icons/react';
 import navStyles from './index.module.sass';
 import utilStyles from '../../styles/utils.module.sass';
 
-export default function Navigation() {
+export default function MobileNavigation() {
     const router = useRouter();
     const navigationListRef = useRef(null);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const getActiveRoute = (router) => {
         return router.pathname;
     };
+
+    const handleMenuClick = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
 
     useEffect(() => {
         // Detect if the browser is Safari
@@ -24,8 +30,8 @@ export default function Navigation() {
     }, []);
 
     return (
-        <nav className={`${navStyles.navigation}`}>
-            <ul ref={navigationListRef} className={`${navStyles.navigation__list} ${utilStyles.flex} ${utilStyles['flex-row']}`}>
+        <nav className={`${navStyles.navigation} ${isMenuOpen ? navStyles.menuOpen : ''}`}>
+            <ul ref={navigationListRef} className={`${navStyles.navigation__list} ${utilStyles.flex} ${utilStyles['flex-column']}`}>
                 <li className={`${navStyles['home-icon']}`}>
                     <Link className={`${navStyles.option} ${getActiveRoute(router) == '/' ? navStyles.active : ''} ${navStyles.home} ${utilStyles.flex} ${utilStyles['flex-align-center']} ${utilStyles['rounded-m']} ${utilStyles['gap-1']}`} href="/">
                         <Placeholder weight='fill'/>
@@ -54,6 +60,10 @@ export default function Navigation() {
                         <PenNib weight='fill'/>
                         Posts
                     </Link>
+                </li>
+                <li className={`${navStyles['home-icon']} ${navStyles.option} ${navStyles.toggle} ${utilStyles.flex}`} onClick={handleMenuClick}>
+                    <Hamburger weight='fill'/>
+                    Menu
                 </li>
             </ul>
         </nav>

@@ -8,6 +8,7 @@ import Polaroid from '../components/Polaroid';
 import homeStyles from '../styles/Home.module.sass';
 import TimelineList from '../components/TimelineList';
 import Navigation from '../components/Navigation';
+import MobileNavigation from '../components/MobileNavigation';
 import Stickers from '../components/Stickers';
 // import Image from 'next/image';
 
@@ -27,7 +28,7 @@ export default function Home() {
             <Section id='about' heading='About' icon={IdentificationCard} notes >
                 <p>
                     <em>
-                        For over 9 years I have been providing my skills in design and front-end development to <a href='https://s-d-s.co.uk' target='_blank'>Shelton Development Services</a> in the UK. I&apos;m proud to have worn many hats and have worked in various other areas including UI/UX design, email design, graphic design and project management.
+                        For over 10 years I have been providing my skills in design and front-end development to software companies and private clients. I&apos;m proud to have worn many hats and have worked in various other areas including UI/UX design, email design, graphic design and project management.
                         <br></br>
                         <br></br>
                         I&apos;m now looking for my next role where I can continue working at the intersection of code, design and art and improve my knowledge and exposure to design systems and component libraries.<PenNib weight='fill'/>
@@ -37,6 +38,7 @@ export default function Home() {
             <Section id='work' heading='Work' icon={Briefcase}>
                 <TimelineList />
             </Section>
+            <MobileNavigation />
         </Layout>
     );
 }

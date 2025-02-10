@@ -3,7 +3,8 @@ import Head from 'next/head';
 import Layout from '../../components/layout';
 import Section from '../../components/Section';
 import Navigation from '../../components/Navigation';
-import { Devices, PaintBrush, ArticleNyTimes, FolderNotchOpen } from '@phosphor-icons/react';
+import MobileNavigation from '../../components/MobileNavigation';
+import { Devices, PaintBrush, ArticleNyTimes, FolderNotchOpen, Globe } from '@phosphor-icons/react';
 
 export default function ProjectList() {
     return (
@@ -21,6 +22,12 @@ export default function ProjectList() {
                         </li>
                         <li>
                             <Link href='/projects/homematch'>HomeMatch</Link>
+                        </li>
+                    </ul>
+                    <li><h3><Globe weight='regular' /> Websites</h3></li>
+                    <ul>
+                        <li>
+                            <Link href='/projects/austinracing'>Austin Racing</Link>
                         </li>
                     </ul>
                     <li><h3><PaintBrush weight='fill' /> Visual Design</h3></li>
@@ -43,6 +50,7 @@ export default function ProjectList() {
                     </ul>
                 </ul>
             </Section>
+            <MobileNavigation />
         </Layout>
     );
 }
