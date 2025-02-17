@@ -1,4 +1,4 @@
-import { useEffect, useState, React } from 'react';
+import { useEffect, useState, useRef, React } from 'react';
 import Layout from '../../components/layout';
 import Head from 'next/head';
 import Navigation from '../../components/Navigation';
@@ -7,20 +7,18 @@ import ImageSection from '../../components/ImageSection';
 import Image from 'next/image';
 import projectStyles from '../../styles/projects.module.sass';
 
-export default function Dexie() {
+export default function ImageRotator() {
     const [rotation, setRotation] = useState({ x: 0, y: 0 });
     const [isResetting, setIsResetting] = useState(false);
+    const [isDragging, setIsDragging] = useState(false);
+    const startPosition = useRef({ x: 0, y: 0 });
 
     useEffect(() => {
         const handleMouseMove = (e) => {
-            // Get window dimensions for center calculation
             const logoCenterX = window.innerWidth / 2;
             const logoCenterY = window.innerHeight / 2;
-
-            // Get current mouse coordinates
             const { pageX: x, pageY: y } = e;
 
-            // Calculate rotation values
             const xRotate = (x - logoCenterX) * 0.03;
             const yRotate = (logoCenterY - y) * 0.03;
 
@@ -28,27 +26,69 @@ export default function Dexie() {
             setRotation({ x: yRotate, y: xRotate });
         };
 
+        const handleTouchMove = (e) => {
+            if (!isDragging) return;
+
+            e.preventDefault();
+            const touch = e.touches[0];
+            const logoCenterX = window.innerWidth / 2;
+            const logoCenterY = window.innerHeight / 2;
+
+            // Calculate the difference from the start position
+            const deltaX = touch.pageX - startPosition.current.x;
+            const deltaY = touch.pageY - startPosition.current.y;
+
+            // Use deltas to calculate rotation
+            const xRotate = deltaX * 0.1;
+            const yRotate = -deltaY * 0.1;
+
+            setIsResetting(false);
+            setRotation({ x: yRotate, y: xRotate });
+        };
+
+        const handleTouchStart = (e) => {
+            setIsDragging(true);
+            const touch = e.touches[0];
+            startPosition.current = {
+                x: touch.pageX,
+                y: touch.pageY
+            };
+        };
+
+        const handleTouchEnd = () => {
+            setIsDragging(false);
+            resetLogo();
+        };
+
         const resetLogo = () => {
-            console.log('Resetting logo'); // Debug log
             setIsResetting(true);
             setRotation({ x: 0, y: 0 });
         };
 
-        // Change from document to window for mouseleave
+        // Mouse events
         window.addEventListener('mousemove', handleMouseMove);
         window.addEventListener('mouseout', (e) => {
-            // Check if mouse has left the window
             if (e.relatedTarget === null) {
                 resetLogo();
             }
         });
 
-        // Cleanup event listeners
+        // Touch events
+        window.addEventListener('touchstart', handleTouchStart, { passive: false });
+        window.addEventListener('touchmove', handleTouchMove, { passive: false });
+        window.addEventListener('touchend', handleTouchEnd);
+
         return () => {
+            // Cleanup mouse events
             window.removeEventListener('mousemove', handleMouseMove);
             window.removeEventListener('mouseout', resetLogo);
+
+            // Cleanup touch events
+            window.removeEventListener('touchstart', handleTouchStart);
+            window.removeEventListener('touchmove', handleTouchMove);
+            window.removeEventListener('touchend', handleTouchEnd);
         };
-    }, []);
+    }, [isDragging]); // Add isDragging to dependency array
 
     return (
         <Layout homematch additionalClassName={`${projectStyles['main-content-holder']}`}>
@@ -63,6 +103,7 @@ export default function Dexie() {
                         transition: isResetting ? 'transform 1s ease-out' : 'none',
                         WebkitTransform: `rotateY(${rotation.y}deg) rotateX(${rotation.x}deg)`,
                         WebkitTransition: isResetting ? 'transform 1s ease-out' : 'none',
+                        touchAction: 'none', // Prevent default touch actions
                     }}>
                     <Image
                         data-offset="2"
