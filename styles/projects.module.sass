@@ -55,3 +55,44 @@
             gap: calc(var(--gap)*9)
     .two-image-row__img
         width: 100%
+
+
+
+
+.imageHolder
+    // position: absolute
+    width: 100%
+    height: 100vh
+    top: 0
+    -webkit-transform-style: preserve-3d
+
+.logo
+    // height: 70vh
+    position: absolute
+    margin: auto
+    margin-block-start: 0
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    -webkit-transform-style: preserve-3d
+    filter: none !important
+
+.logo.layer1
+    opacity: .5
+    -webkit-transform: translate3d(0, 0, 50px)
+
+
+.logo.layer2
+    -webkit-transform: translate3d(0, 0, 100px)
+
+
+.logo.layer3
+    -webkit-transform: translate3d(0, 0, 150px)
+
+@media (max-width: 740px)
+    .logo
+        height: unset
+        width: 70%
+
+

@@ -24,10 +24,13 @@ export default function ProjectList() {
                             <Link href='/projects/homematch'>HomeMatch</Link>
                         </li>
                     </ul>
-                    <li><h3><Globe weight='regular' /> Websites</h3></li>
+                    <li><h3><Globe weight='regular' />Websites</h3></li>
                     <ul>
                         <li>
                             <Link href='/projects/austinracing'>Austin Racing</Link>
+                        </li>
+                        <li>
+                            <Link href='/projects/drippinglogo'>Dripping Logo</Link>
                         </li>
                     </ul>
                     <li><h3><PaintBrush weight='fill' /> Visual Design</h3></li>
